@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	<ProjectGuid>{C72E5760-6E66-4247-AF97-6021E7418FE0}</ProjectGuid>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Shared\WebAPIServer.Shared.Abstractions\WebAPIServer.Shared.Abstractions.csproj" />
+    <ProjectReference Include="..\..\..\Shared\WebAPIServer.Shared.Infrastructure\WebAPIServer.Shared.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,17 @@
+E:\FPT\DATN\NhómKhang\BE\newest\DuAnTotNghiep.WebAPIServer-dev\src\Modules\Payment\WebAPIServer.Modules.Payment.Domain\bin\Debug\net8.0\WebAPIServer.Modules.Payment.Domain.deps.json
+E:\FPT\DATN\NhómKhang\BE\newest\DuAnTotNghiep.WebAPIServer-dev\src\Modules\Payment\WebAPIServer.Modules.Payment.Domain\bin\Debug\net8.0\WebAPIServer.Modules.Payment.Domain.dll
+E:\FPT\DATN\NhómKhang\BE\newest\DuAnTotNghiep.WebAPIServer-dev\src\Modules\Payment\WebAPIServer.Modules.Payment.Domain\bin\Debug\net8.0\WebAPIServer.Modules.Payment.Domain.pdb
+E:\FPT\DATN\NhómKhang\BE\newest\DuAnTotNghiep.WebAPIServer-dev\src\Modules\Payment\WebAPIServer.Modules.Payment.Domain\bin\Debug\net8.0\WebAPIServer.Shared.Abstractions.dll
+E:\FPT\DATN\NhómKhang\BE\newest\DuAnTotNghiep.WebAPIServer-dev\src\Modules\Payment\WebAPIServer.Modules.Payment.Domain\bin\Debug\net8.0\WebAPIServer.Shared.Infrastructure.dll
+E:\FPT\DATN\NhómKhang\BE\newest\DuAnTotNghiep.WebAPIServer-dev\src\Modules\Payment\WebAPIServer.Modules.Payment.Domain\bin\Debug\net8.0\WebAPIServer.Shared.Abstractions.pdb
+E:\FPT\DATN\NhómKhang\BE\newest\DuAnTotNghiep.WebAPIServer-dev\src\Modules\Payment\WebAPIServer.Modules.Payment.Domain\bin\Debug\net8.0\WebAPIServer.Shared.Infrastructure.pdb
+E:\FPT\DATN\NhómKhang\BE\newest\DuAnTotNghiep.WebAPIServer-dev\src\Modules\Payment\WebAPIServer.Modules.Payment.Domain\obj\Debug\net8.0\WebAPIServer.Modules.Payment.Domain.csproj.AssemblyReference.cache
+E:\FPT\DATN\NhómKhang\BE\newest\DuAnTotNghiep.WebAPIServer-dev\src\Modules\Payment\WebAPIServer.Modules.Payment.Domain\obj\Debug\net8.0\WebAPIServer.Modules.Payment.Domain.GeneratedMSBuildEditorConfig.editorconfig
+E:\FPT\DATN\NhómKhang\BE\newest\DuAnTotNghiep.WebAPIServer-dev\src\Modules\Payment\WebAPIServer.Modules.Payment.Domain\obj\Debug\net8.0\WebAPIServer.Modules.Payment.Domain.AssemblyInfoInputs.cache
+E:\FPT\DATN\NhómKhang\BE\newest\DuAnTotNghiep.WebAPIServer-dev\src\Modules\Payment\WebAPIServer.Modules.Payment.Domain\obj\Debug\net8.0\WebAPIServer.Modules.Payment.Domain.AssemblyInfo.cs
+E:\FPT\DATN\NhómKhang\BE\newest\DuAnTotNghiep.WebAPIServer-dev\src\Modules\Payment\WebAPIServer.Modules.Payment.Domain\obj\Debug\net8.0\WebAPIServer.Modules.Payment.Domain.csproj.CoreCompileInputs.cache
+E:\FPT\DATN\NhómKhang\BE\newest\DuAnTotNghiep.WebAPIServer-dev\src\Modules\Payment\WebAPIServer.Modules.Payment.Domain\obj\Debug\net8.0\WebAPISe.22535F37.Up2Date
+E:\FPT\DATN\NhómKhang\BE\newest\DuAnTotNghiep.WebAPIServer-dev\src\Modules\Payment\WebAPIServer.Modules.Payment.Domain\obj\Debug\net8.0\WebAPIServer.Modules.Payment.Domain.dll
+E:\FPT\DATN\NhómKhang\BE\newest\DuAnTotNghiep.WebAPIServer-dev\src\Modules\Payment\WebAPIServer.Modules.Payment.Domain\obj\Debug\net8.0\refint\WebAPIServer.Modules.Payment.Domain.dll
+E:\FPT\DATN\NhómKhang\BE\newest\DuAnTotNghiep.WebAPIServer-dev\src\Modules\Payment\WebAPIServer.Modules.Payment.Domain\obj\Debug\net8.0\WebAPIServer.Modules.Payment.Domain.pdb
+E:\FPT\DATN\NhómKhang\BE\newest\DuAnTotNghiep.WebAPIServer-dev\src\Modules\Payment\WebAPIServer.Modules.Payment.Domain\obj\Debug\net8.0\ref\WebAPIServer.Modules.Payment.Domain.dll

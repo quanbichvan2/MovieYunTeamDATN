@@ -1,0 +1,17 @@
+E:\FPT\DATN\NhómKhang\BE\newest\DuAnTotNghiep.WebAPIServer-dev\src\Modules\Tickets\WebAPIServer.Modules.Tickets.Domain\bin\Debug\net8.0\WebAPIServer.Modules.Tickets.Domain.deps.json
+E:\FPT\DATN\NhómKhang\BE\newest\DuAnTotNghiep.WebAPIServer-dev\src\Modules\Tickets\WebAPIServer.Modules.Tickets.Domain\bin\Debug\net8.0\WebAPIServer.Modules.Tickets.Domain.dll
+E:\FPT\DATN\NhómKhang\BE\newest\DuAnTotNghiep.WebAPIServer-dev\src\Modules\Tickets\WebAPIServer.Modules.Tickets.Domain\bin\Debug\net8.0\WebAPIServer.Modules.Tickets.Domain.pdb
+E:\FPT\DATN\NhómKhang\BE\newest\DuAnTotNghiep.WebAPIServer-dev\src\Modules\Tickets\WebAPIServer.Modules.Tickets.Domain\bin\Debug\net8.0\WebAPIServer.Shared.Abstractions.dll
+E:\FPT\DATN\NhómKhang\BE\newest\DuAnTotNghiep.WebAPIServer-dev\src\Modules\Tickets\WebAPIServer.Modules.Tickets.Domain\bin\Debug\net8.0\WebAPIServer.Shared.Infrastructure.dll
+E:\FPT\DATN\NhómKhang\BE\newest\DuAnTotNghiep.WebAPIServer-dev\src\Modules\Tickets\WebAPIServer.Modules.Tickets.Domain\bin\Debug\net8.0\WebAPIServer.Shared.Abstractions.pdb
+E:\FPT\DATN\NhómKhang\BE\newest\DuAnTotNghiep.WebAPIServer-dev\src\Modules\Tickets\WebAPIServer.Modules.Tickets.Domain\bin\Debug\net8.0\WebAPIServer.Shared.Infrastructure.pdb
+E:\FPT\DATN\NhómKhang\BE\newest\DuAnTotNghiep.WebAPIServer-dev\src\Modules\Tickets\WebAPIServer.Modules.Tickets.Domain\obj\Debug\net8.0\WebAPIServer.Modules.Tickets.Domain.csproj.AssemblyReference.cache
+E:\FPT\DATN\NhómKhang\BE\newest\DuAnTotNghiep.WebAPIServer-dev\src\Modules\Tickets\WebAPIServer.Modules.Tickets.Domain\obj\Debug\net8.0\WebAPIServer.Modules.Tickets.Domain.GeneratedMSBuildEditorConfig.editorconfig
+E:\FPT\DATN\NhómKhang\BE\newest\DuAnTotNghiep.WebAPIServer-dev\src\Modules\Tickets\WebAPIServer.Modules.Tickets.Domain\obj\Debug\net8.0\WebAPIServer.Modules.Tickets.Domain.AssemblyInfoInputs.cache
+E:\FPT\DATN\NhómKhang\BE\newest\DuAnTotNghiep.WebAPIServer-dev\src\Modules\Tickets\WebAPIServer.Modules.Tickets.Domain\obj\Debug\net8.0\WebAPIServer.Modules.Tickets.Domain.AssemblyInfo.cs
+E:\FPT\DATN\NhómKhang\BE\newest\DuAnTotNghiep.WebAPIServer-dev\src\Modules\Tickets\WebAPIServer.Modules.Tickets.Domain\obj\Debug\net8.0\WebAPIServer.Modules.Tickets.Domain.csproj.CoreCompileInputs.cache
+E:\FPT\DATN\NhómKhang\BE\newest\DuAnTotNghiep.WebAPIServer-dev\src\Modules\Tickets\WebAPIServer.Modules.Tickets.Domain\obj\Debug\net8.0\WebAPISe.AF03668B.Up2Date
+E:\FPT\DATN\NhómKhang\BE\newest\DuAnTotNghiep.WebAPIServer-dev\src\Modules\Tickets\WebAPIServer.Modules.Tickets.Domain\obj\Debug\net8.0\WebAPIServer.Modules.Tickets.Domain.dll
+E:\FPT\DATN\NhómKhang\BE\newest\DuAnTotNghiep.WebAPIServer-dev\src\Modules\Tickets\WebAPIServer.Modules.Tickets.Domain\obj\Debug\net8.0\refint\WebAPIServer.Modules.Tickets.Domain.dll
+E:\FPT\DATN\NhómKhang\BE\newest\DuAnTotNghiep.WebAPIServer-dev\src\Modules\Tickets\WebAPIServer.Modules.Tickets.Domain\obj\Debug\net8.0\WebAPIServer.Modules.Tickets.Domain.pdb
+E:\FPT\DATN\NhómKhang\BE\newest\DuAnTotNghiep.WebAPIServer-dev\src\Modules\Tickets\WebAPIServer.Modules.Tickets.Domain\obj\Debug\net8.0\ref\WebAPIServer.Modules.Tickets.Domain.dll

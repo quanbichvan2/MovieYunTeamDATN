@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<UserSecretsId>ff39d142-4b20-4637-9730-d0ed4ff3df4c</UserSecretsId>
+		<DockerDefaultTargetOS>Windows</DockerDefaultTargetOS>
+		<DockerfileContext>..\..\..</DockerfileContext>
+		<DockerComposeProjectPath>..\..\..\docker-compose.dcproj</DockerComposeProjectPath>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <None Include="..\..\..\.editorconfig" Link=".editorconfig" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.10">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.21.0" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\Modules\Booking\WebAPIServer.Modules.Booking.Api\WebAPIServer.Modules.Booking.Api.csproj" />
+		<ProjectReference Include="..\..\Modules\Catalog\WebAPIServer.Modules.Catalog.Api\WebAPIServer.Modules.Catalog.Api.csproj" />
+		<ProjectReference Include="..\..\Modules\Identity\WebAPIServer.Modules.Identity.Api\WebAPIServer.Modules.Identity.Api.csproj" />
+		<ProjectReference Include="..\..\Modules\MovieManagement\WebAPIServer.Modules.MovieManagement.Api\WebAPIServer.Modules.MovieManagement.Api.csproj" />
+		<ProjectReference Include="..\..\Modules\Payment\WebAPIServer.Modules.Payment.Api\WebAPIServer.Modules.Payment.Api.csproj" />
+		<ProjectReference Include="..\..\Modules\Tickets\WebAPIServer.Modules.Tickets.Api\WebAPIServer.Modules.Tickets.Api.csproj" />
+		<ProjectReference Include="..\..\Modules\Vouchers\WebAPIServer.Modules.Vouchers.Api\WebAPIServer.Modules.Vouchers.Api.csproj" />
+		<ProjectReference Include="..\..\Modules\Users\WebAPIServer.Modules.Users.Api\WebAPIServer.Modules.Users.Api.csproj" />
+	</ItemGroup>
+
+</Project>

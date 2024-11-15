@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<ProjectGuid>{DF1824A6-8EB2-4CD2-AC73-90BBE1C38B70}</ProjectGuid>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.7" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\WebAPIServer.Modules.Identity.DataAccesses\WebAPIServer.Modules.Identity.DataAccesses.csproj" />
+	</ItemGroup>
+
+</Project>

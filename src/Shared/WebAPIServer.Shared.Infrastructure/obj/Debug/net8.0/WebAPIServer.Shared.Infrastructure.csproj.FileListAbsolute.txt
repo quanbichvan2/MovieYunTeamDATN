@@ -1,0 +1,15 @@
+E:\FPT\DATN\NhómKhang\BE\newest\DuAnTotNghiep.WebAPIServer-dev\src\Shared\WebAPIServer.Shared.Infrastructure\bin\Debug\net8.0\WebAPIServer.Shared.Infrastructure.deps.json
+E:\FPT\DATN\NhómKhang\BE\newest\DuAnTotNghiep.WebAPIServer-dev\src\Shared\WebAPIServer.Shared.Infrastructure\bin\Debug\net8.0\WebAPIServer.Shared.Infrastructure.dll
+E:\FPT\DATN\NhómKhang\BE\newest\DuAnTotNghiep.WebAPIServer-dev\src\Shared\WebAPIServer.Shared.Infrastructure\bin\Debug\net8.0\WebAPIServer.Shared.Infrastructure.pdb
+E:\FPT\DATN\NhómKhang\BE\newest\DuAnTotNghiep.WebAPIServer-dev\src\Shared\WebAPIServer.Shared.Infrastructure\bin\Debug\net8.0\WebAPIServer.Shared.Abstractions.dll
+E:\FPT\DATN\NhómKhang\BE\newest\DuAnTotNghiep.WebAPIServer-dev\src\Shared\WebAPIServer.Shared.Infrastructure\bin\Debug\net8.0\WebAPIServer.Shared.Abstractions.pdb
+E:\FPT\DATN\NhómKhang\BE\newest\DuAnTotNghiep.WebAPIServer-dev\src\Shared\WebAPIServer.Shared.Infrastructure\obj\Debug\net8.0\WebAPIServer.Shared.Infrastructure.csproj.AssemblyReference.cache
+E:\FPT\DATN\NhómKhang\BE\newest\DuAnTotNghiep.WebAPIServer-dev\src\Shared\WebAPIServer.Shared.Infrastructure\obj\Debug\net8.0\WebAPIServer.Shared.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+E:\FPT\DATN\NhómKhang\BE\newest\DuAnTotNghiep.WebAPIServer-dev\src\Shared\WebAPIServer.Shared.Infrastructure\obj\Debug\net8.0\WebAPIServer.Shared.Infrastructure.AssemblyInfoInputs.cache
+E:\FPT\DATN\NhómKhang\BE\newest\DuAnTotNghiep.WebAPIServer-dev\src\Shared\WebAPIServer.Shared.Infrastructure\obj\Debug\net8.0\WebAPIServer.Shared.Infrastructure.AssemblyInfo.cs
+E:\FPT\DATN\NhómKhang\BE\newest\DuAnTotNghiep.WebAPIServer-dev\src\Shared\WebAPIServer.Shared.Infrastructure\obj\Debug\net8.0\WebAPIServer.Shared.Infrastructure.csproj.CoreCompileInputs.cache
+E:\FPT\DATN\NhómKhang\BE\newest\DuAnTotNghiep.WebAPIServer-dev\src\Shared\WebAPIServer.Shared.Infrastructure\obj\Debug\net8.0\WebAPISe.791268F1.Up2Date
+E:\FPT\DATN\NhómKhang\BE\newest\DuAnTotNghiep.WebAPIServer-dev\src\Shared\WebAPIServer.Shared.Infrastructure\obj\Debug\net8.0\WebAPIServer.Shared.Infrastructure.dll
+E:\FPT\DATN\NhómKhang\BE\newest\DuAnTotNghiep.WebAPIServer-dev\src\Shared\WebAPIServer.Shared.Infrastructure\obj\Debug\net8.0\refint\WebAPIServer.Shared.Infrastructure.dll
+E:\FPT\DATN\NhómKhang\BE\newest\DuAnTotNghiep.WebAPIServer-dev\src\Shared\WebAPIServer.Shared.Infrastructure\obj\Debug\net8.0\WebAPIServer.Shared.Infrastructure.pdb
+E:\FPT\DATN\NhómKhang\BE\newest\DuAnTotNghiep.WebAPIServer-dev\src\Shared\WebAPIServer.Shared.Infrastructure\obj\Debug\net8.0\ref\WebAPIServer.Shared.Infrastructure.dll

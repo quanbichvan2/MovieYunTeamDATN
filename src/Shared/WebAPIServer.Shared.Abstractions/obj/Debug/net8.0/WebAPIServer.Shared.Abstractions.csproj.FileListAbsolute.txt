@@ -1,0 +1,12 @@
+E:\FPT\DATN\NhómKhang\BE\newest\DuAnTotNghiep.WebAPIServer-dev\src\Shared\WebAPIServer.Shared.Abstractions\bin\Debug\net8.0\WebAPIServer.Shared.Abstractions.deps.json
+E:\FPT\DATN\NhómKhang\BE\newest\DuAnTotNghiep.WebAPIServer-dev\src\Shared\WebAPIServer.Shared.Abstractions\bin\Debug\net8.0\WebAPIServer.Shared.Abstractions.dll
+E:\FPT\DATN\NhómKhang\BE\newest\DuAnTotNghiep.WebAPIServer-dev\src\Shared\WebAPIServer.Shared.Abstractions\bin\Debug\net8.0\WebAPIServer.Shared.Abstractions.pdb
+E:\FPT\DATN\NhómKhang\BE\newest\DuAnTotNghiep.WebAPIServer-dev\src\Shared\WebAPIServer.Shared.Abstractions\obj\Debug\net8.0\WebAPIServer.Shared.Abstractions.csproj.AssemblyReference.cache
+E:\FPT\DATN\NhómKhang\BE\newest\DuAnTotNghiep.WebAPIServer-dev\src\Shared\WebAPIServer.Shared.Abstractions\obj\Debug\net8.0\WebAPIServer.Shared.Abstractions.GeneratedMSBuildEditorConfig.editorconfig
+E:\FPT\DATN\NhómKhang\BE\newest\DuAnTotNghiep.WebAPIServer-dev\src\Shared\WebAPIServer.Shared.Abstractions\obj\Debug\net8.0\WebAPIServer.Shared.Abstractions.AssemblyInfoInputs.cache
+E:\FPT\DATN\NhómKhang\BE\newest\DuAnTotNghiep.WebAPIServer-dev\src\Shared\WebAPIServer.Shared.Abstractions\obj\Debug\net8.0\WebAPIServer.Shared.Abstractions.AssemblyInfo.cs
+E:\FPT\DATN\NhómKhang\BE\newest\DuAnTotNghiep.WebAPIServer-dev\src\Shared\WebAPIServer.Shared.Abstractions\obj\Debug\net8.0\WebAPIServer.Shared.Abstractions.csproj.CoreCompileInputs.cache
+E:\FPT\DATN\NhómKhang\BE\newest\DuAnTotNghiep.WebAPIServer-dev\src\Shared\WebAPIServer.Shared.Abstractions\obj\Debug\net8.0\WebAPIServer.Shared.Abstractions.dll
+E:\FPT\DATN\NhómKhang\BE\newest\DuAnTotNghiep.WebAPIServer-dev\src\Shared\WebAPIServer.Shared.Abstractions\obj\Debug\net8.0\refint\WebAPIServer.Shared.Abstractions.dll
+E:\FPT\DATN\NhómKhang\BE\newest\DuAnTotNghiep.WebAPIServer-dev\src\Shared\WebAPIServer.Shared.Abstractions\obj\Debug\net8.0\WebAPIServer.Shared.Abstractions.pdb
+E:\FPT\DATN\NhómKhang\BE\newest\DuAnTotNghiep.WebAPIServer-dev\src\Shared\WebAPIServer.Shared.Abstractions\obj\Debug\net8.0\ref\WebAPIServer.Shared.Abstractions.dll

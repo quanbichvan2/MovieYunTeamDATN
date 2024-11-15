@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	  <ProjectGuid>{C0D5298E-CA71-4D2A-BB61-1D3003A52CAF}</ProjectGuid>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WebAPIServer.Modules.Users.Businesses\WebAPIServer.Modules.Users.Businesses.csproj" />
+  </ItemGroup>
+
+</Project>

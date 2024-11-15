@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="HanldeTicketType\Commands - Copy\**" />
+    <Compile Remove="HanldeTicketType\Models - Copy\**" />
+    <Compile Remove="HanldeTicketType\Queries - Copy\**" />
+    <Compile Remove="HanldeTicketType\Validations - Copy\**" />
+    <EmbeddedResource Remove="HanldeTicketType\Commands - Copy\**" />
+    <EmbeddedResource Remove="HanldeTicketType\Models - Copy\**" />
+    <EmbeddedResource Remove="HanldeTicketType\Queries - Copy\**" />
+    <EmbeddedResource Remove="HanldeTicketType\Validations - Copy\**" />
+    <None Remove="HanldeTicketType\Commands - Copy\**" />
+    <None Remove="HanldeTicketType\Models - Copy\**" />
+    <None Remove="HanldeTicketType\Queries - Copy\**" />
+    <None Remove="HanldeTicketType\Validations - Copy\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WebAPIServer.Modules.Tickets.Domain\WebAPIServer.Modules.Tickets.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

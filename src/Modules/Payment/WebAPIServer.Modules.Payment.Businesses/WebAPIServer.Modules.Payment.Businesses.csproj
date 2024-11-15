@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	  <ProjectGuid>{321A055D-B364-4090-B77F-72D6A3F4618F}</ProjectGuid>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="HandlePayment\Validations\**" />
+    <EmbeddedResource Remove="HandlePayment\Validations\**" />
+    <None Remove="HandlePayment\Validations\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WebAPIServer.Modules.Payment.Domain\WebAPIServer.Modules.Payment.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="RabbitMQ.Client" Version="6.8.1" />
+  </ItemGroup>
+
+</Project>

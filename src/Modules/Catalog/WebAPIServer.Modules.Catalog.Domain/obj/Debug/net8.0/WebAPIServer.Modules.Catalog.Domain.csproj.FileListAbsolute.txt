@@ -1,0 +1,17 @@
+E:\FPT\DATN\NhómKhang\BE\newest\DuAnTotNghiep.WebAPIServer-dev\src\Modules\Catalog\WebAPIServer.Modules.Catalog.Domain\bin\Debug\net8.0\WebAPIServer.Modules.Catalog.Domain.deps.json
+E:\FPT\DATN\NhómKhang\BE\newest\DuAnTotNghiep.WebAPIServer-dev\src\Modules\Catalog\WebAPIServer.Modules.Catalog.Domain\bin\Debug\net8.0\WebAPIServer.Modules.Catalog.Domain.dll
+E:\FPT\DATN\NhómKhang\BE\newest\DuAnTotNghiep.WebAPIServer-dev\src\Modules\Catalog\WebAPIServer.Modules.Catalog.Domain\bin\Debug\net8.0\WebAPIServer.Modules.Catalog.Domain.pdb
+E:\FPT\DATN\NhómKhang\BE\newest\DuAnTotNghiep.WebAPIServer-dev\src\Modules\Catalog\WebAPIServer.Modules.Catalog.Domain\bin\Debug\net8.0\WebAPIServer.Shared.Abstractions.dll
+E:\FPT\DATN\NhómKhang\BE\newest\DuAnTotNghiep.WebAPIServer-dev\src\Modules\Catalog\WebAPIServer.Modules.Catalog.Domain\bin\Debug\net8.0\WebAPIServer.Shared.Infrastructure.dll
+E:\FPT\DATN\NhómKhang\BE\newest\DuAnTotNghiep.WebAPIServer-dev\src\Modules\Catalog\WebAPIServer.Modules.Catalog.Domain\bin\Debug\net8.0\WebAPIServer.Shared.Abstractions.pdb
+E:\FPT\DATN\NhómKhang\BE\newest\DuAnTotNghiep.WebAPIServer-dev\src\Modules\Catalog\WebAPIServer.Modules.Catalog.Domain\bin\Debug\net8.0\WebAPIServer.Shared.Infrastructure.pdb
+E:\FPT\DATN\NhómKhang\BE\newest\DuAnTotNghiep.WebAPIServer-dev\src\Modules\Catalog\WebAPIServer.Modules.Catalog.Domain\obj\Debug\net8.0\WebAPIServer.Modules.Catalog.Domain.csproj.AssemblyReference.cache
+E:\FPT\DATN\NhómKhang\BE\newest\DuAnTotNghiep.WebAPIServer-dev\src\Modules\Catalog\WebAPIServer.Modules.Catalog.Domain\obj\Debug\net8.0\WebAPIServer.Modules.Catalog.Domain.GeneratedMSBuildEditorConfig.editorconfig
+E:\FPT\DATN\NhómKhang\BE\newest\DuAnTotNghiep.WebAPIServer-dev\src\Modules\Catalog\WebAPIServer.Modules.Catalog.Domain\obj\Debug\net8.0\WebAPIServer.Modules.Catalog.Domain.AssemblyInfoInputs.cache
+E:\FPT\DATN\NhómKhang\BE\newest\DuAnTotNghiep.WebAPIServer-dev\src\Modules\Catalog\WebAPIServer.Modules.Catalog.Domain\obj\Debug\net8.0\WebAPIServer.Modules.Catalog.Domain.AssemblyInfo.cs
+E:\FPT\DATN\NhómKhang\BE\newest\DuAnTotNghiep.WebAPIServer-dev\src\Modules\Catalog\WebAPIServer.Modules.Catalog.Domain\obj\Debug\net8.0\WebAPIServer.Modules.Catalog.Domain.csproj.CoreCompileInputs.cache
+E:\FPT\DATN\NhómKhang\BE\newest\DuAnTotNghiep.WebAPIServer-dev\src\Modules\Catalog\WebAPIServer.Modules.Catalog.Domain\obj\Debug\net8.0\WebAPISe.DCCFAAF7.Up2Date
+E:\FPT\DATN\NhómKhang\BE\newest\DuAnTotNghiep.WebAPIServer-dev\src\Modules\Catalog\WebAPIServer.Modules.Catalog.Domain\obj\Debug\net8.0\WebAPIServer.Modules.Catalog.Domain.dll
+E:\FPT\DATN\NhómKhang\BE\newest\DuAnTotNghiep.WebAPIServer-dev\src\Modules\Catalog\WebAPIServer.Modules.Catalog.Domain\obj\Debug\net8.0\refint\WebAPIServer.Modules.Catalog.Domain.dll
+E:\FPT\DATN\NhómKhang\BE\newest\DuAnTotNghiep.WebAPIServer-dev\src\Modules\Catalog\WebAPIServer.Modules.Catalog.Domain\obj\Debug\net8.0\WebAPIServer.Modules.Catalog.Domain.pdb
+E:\FPT\DATN\NhómKhang\BE\newest\DuAnTotNghiep.WebAPIServer-dev\src\Modules\Catalog\WebAPIServer.Modules.Catalog.Domain\obj\Debug\net8.0\ref\WebAPIServer.Modules.Catalog.Domain.dll

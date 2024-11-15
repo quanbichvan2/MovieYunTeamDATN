@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "GXer7WHqzqcM3EVdsz1EpmOHZENLbP6t0YqrlnwOIkE=",
+  "Source": "WebAPIServer.Bootstrapper",
+  "BasePath": "_content/WebAPIServer.Bootstrapper",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

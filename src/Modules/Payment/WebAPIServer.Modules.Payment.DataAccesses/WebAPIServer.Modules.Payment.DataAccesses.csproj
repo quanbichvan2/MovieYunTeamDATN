@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	  <ProjectGuid>{5B02EB44-359F-441E-8C74-D4563E429360}</ProjectGuid>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Tickets\WebAPIServer.Modules.Tickets.DataAccesses\WebAPIServer.Modules.Tickets.DataAccesses.csproj" />
+    <ProjectReference Include="..\..\Tickets\WebAPIServer.Modules.Tickets.Domain\WebAPIServer.Modules.Tickets.Domain.csproj" />
+    <ProjectReference Include="..\WebAPIServer.Modules.Payment.Businesses\WebAPIServer.Modules.Payment.Businesses.csproj" />
+    <ProjectReference Include="..\WebAPIServer.Modules.Payment.Domain\WebAPIServer.Modules.Payment.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

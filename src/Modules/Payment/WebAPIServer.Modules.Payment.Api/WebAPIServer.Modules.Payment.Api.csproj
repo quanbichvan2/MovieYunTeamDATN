@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	  <ProjectGuid>{2A5090E3-9B02-40BA-98C2-0147470653D0}</ProjectGuid>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WebAPIServer.Modules.Payment.Businesses\WebAPIServer.Modules.Payment.Businesses.csproj" />
+    <ProjectReference Include="..\WebAPIServer.Modules.Payment.DataAccesses\WebAPIServer.Modules.Payment.DataAccesses.csproj" />
+  </ItemGroup>
+
+</Project>
