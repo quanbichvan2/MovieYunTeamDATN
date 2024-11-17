@@ -3,7 +3,7 @@ using WebAPIServer.Shared.Abstractions.Entities;
 
 namespace WebAPIServer.Modules.Booking.Domain.Entities
 {
-	public class OrderCombo : BaseEntity
+	public class OrderCombo1 : BaseEntity
 	{
 		public int Quantity { get; set; }
 		public double UnitPrice { get; set; }

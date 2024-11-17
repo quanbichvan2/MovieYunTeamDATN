@@ -1724,24 +1724,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Yun PC\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\ASUS\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\FPT\\DATN\\NhómKhang\\BE\\newest\\DuAnTotNghiep.WebAPIServer-dev\\src\\Modules\\Tickets\\WebAPIServer.Modules.Tickets.DataAccesses\\WebAPIServer.Modules.Tickets.DataAccesses.csproj",
+      "projectUniqueName": "D:\\MovieYunTeamDATN\\src\\Modules\\Tickets\\WebAPIServer.Modules.Tickets.DataAccesses\\WebAPIServer.Modules.Tickets.DataAccesses.csproj",
       "projectName": "WebAPIServer.Modules.Tickets.DataAccesses",
-      "projectPath": "E:\\FPT\\DATN\\NhómKhang\\BE\\newest\\DuAnTotNghiep.WebAPIServer-dev\\src\\Modules\\Tickets\\WebAPIServer.Modules.Tickets.DataAccesses\\WebAPIServer.Modules.Tickets.DataAccesses.csproj",
-      "packagesPath": "C:\\Users\\Yun PC\\.nuget\\packages\\",
-      "outputPath": "E:\\FPT\\DATN\\NhómKhang\\BE\\newest\\DuAnTotNghiep.WebAPIServer-dev\\src\\Modules\\Tickets\\WebAPIServer.Modules.Tickets.DataAccesses\\obj\\",
+      "projectPath": "D:\\MovieYunTeamDATN\\src\\Modules\\Tickets\\WebAPIServer.Modules.Tickets.DataAccesses\\WebAPIServer.Modules.Tickets.DataAccesses.csproj",
+      "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
+      "outputPath": "D:\\MovieYunTeamDATN\\src\\Modules\\Tickets\\WebAPIServer.Modules.Tickets.DataAccesses\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Yun PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1756,11 +1751,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "E:\\FPT\\DATN\\NhómKhang\\BE\\newest\\DuAnTotNghiep.WebAPIServer-dev\\src\\Modules\\Tickets\\WebAPIServer.Modules.Tickets.Businesses\\WebAPIServer.Modules.Tickets.Businesses.csproj": {
-              "projectPath": "E:\\FPT\\DATN\\NhómKhang\\BE\\newest\\DuAnTotNghiep.WebAPIServer-dev\\src\\Modules\\Tickets\\WebAPIServer.Modules.Tickets.Businesses\\WebAPIServer.Modules.Tickets.Businesses.csproj"
+            "D:\\MovieYunTeamDATN\\src\\Modules\\Tickets\\WebAPIServer.Modules.Tickets.Businesses\\WebAPIServer.Modules.Tickets.Businesses.csproj": {
+              "projectPath": "D:\\MovieYunTeamDATN\\src\\Modules\\Tickets\\WebAPIServer.Modules.Tickets.Businesses\\WebAPIServer.Modules.Tickets.Businesses.csproj"
             },
-            "E:\\FPT\\DATN\\NhómKhang\\BE\\newest\\DuAnTotNghiep.WebAPIServer-dev\\src\\Modules\\Tickets\\WebAPIServer.Modules.Tickets.Domain\\WebAPIServer.Modules.Tickets.Domain.csproj": {
-              "projectPath": "E:\\FPT\\DATN\\NhómKhang\\BE\\newest\\DuAnTotNghiep.WebAPIServer-dev\\src\\Modules\\Tickets\\WebAPIServer.Modules.Tickets.Domain\\WebAPIServer.Modules.Tickets.Domain.csproj"
+            "D:\\MovieYunTeamDATN\\src\\Modules\\Tickets\\WebAPIServer.Modules.Tickets.Domain\\WebAPIServer.Modules.Tickets.Domain.csproj": {
+              "projectPath": "D:\\MovieYunTeamDATN\\src\\Modules\\Tickets\\WebAPIServer.Modules.Tickets.Domain\\WebAPIServer.Modules.Tickets.Domain.csproj"
             }
           }
         }
@@ -1795,7 +1790,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

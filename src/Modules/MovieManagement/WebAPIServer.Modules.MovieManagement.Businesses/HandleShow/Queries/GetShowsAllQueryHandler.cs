@@ -14,14 +14,20 @@ namespace WebAPIServer.Modules.MovieManagement.Businesses.HandleShow.Queries
     {
         private readonly ILogger<GetShowsAllQueryHandler> _logger;
         private readonly IShowRepository _showRepository;
+        private readonly IHallRepository _hallRepository;
+        private readonly IMovieRepository _movieRepository;
         private readonly IMapper _mapper;
         public GetShowsAllQueryHandler(ILogger<GetShowsAllQueryHandler> logger,
             IShowRepository showRepository,
-            IMapper mapper)
+            IMapper mapper,
+            IHallRepository hallRepository,
+            IMovieRepository movieRepository)
         {
             _logger = logger;
             _showRepository = showRepository;
             _mapper = mapper;
+            _hallRepository = hallRepository;
+            _movieRepository = movieRepository;
         }
         public async Task<PaginatedList<ShowForViewDto>> Handle(GetShowsAllQuery request, CancellationToken cancellationToken)
         {
@@ -41,7 +47,62 @@ namespace WebAPIServer.Modules.MovieManagement.Businesses.HandleShow.Queries
                     request.Filter.PageIndex,
                     request.Filter.PageSize,
                     cancellationToken);
-                var showForViewDtos = _mapper.Map<List<ShowForViewDto>>(paginatedShows.Items);
+
+                var a = paginatedShows.Items.GroupBy(x => x.MovieId).ToList();
+                List<ShowForViewDto> showForViewDtos = null ;
+                foreach (var item in a)
+                {
+                    showForViewDtos = new List<ShowForViewDto>();
+                    foreach (var itemDto in a)
+                    {
+                        var movie = await _movieRepository.GetByIdAsync(itemDto.First().MovieId);
+                        ShowForViewDto showForViewDto = new ShowForViewDto();
+                        showForViewDto.MovieId = movie.Id;
+                        showForViewDto.MovieTitle = movie.Title;
+                        showForViewDto.MoviePosterImage = movie.PosterImage;
+                        showForViewDto.AgeRating = movie.AgeRating;
+                        showForViewDto.MovieRuntimeMinutes = movie.RuntimeMinutes;
+                        //var genres = await _genreRepository.GetByIdAsync(movie.Genres.First().Id);
+                        foreach (var item1 in movie.Genres)
+                        {
+                            GenreMovieDto genre = new GenreMovieDto();
+                            genre.Id = item1.Id;
+                            genre.Name = item1.GenreName;
+                            showForViewDto.Genres.Add(genre);
+                        }
+
+                        var show = _showRepository.GetAll().Where(x => x.MovieId == movie.Id).GroupBy(x => x.CinemaHallId).ToList();
+                        foreach (var group in show)
+                        {
+                            var groupHall = group.GroupBy(x => x.StartTime.Date).ToList();
+                            ListHall listHall = new ListHall();
+                            foreach (var item1 in groupHall)
+                            {
+                                ListTime listTime = new ListTime();
+                                foreach (var item2 in item1)
+                                {
+                                    var hall = await _hallRepository.GetByIdAsync(item2.CinemaHallId);
+                                    listHall.HallId = hall.Id;
+                                    listHall.HallName = hall.Name;
+
+
+                                    listTime.StartTime = item2.StartTime.Day + "-" + item2.StartTime.Month + "-" + item2.StartTime.Year;
+                                    var hour = item2.StartTime.Hour.ToString().Length == 2 ? item2.StartTime.Hour.ToString() : ("0" + item2.StartTime.Hour.ToString());
+                                    var minute = item2.StartTime.Minute.ToString().Length == 2 ? item2.StartTime.Minute.ToString() : ("0" + item2.StartTime.Minute.ToString());
+                                    listTime.ShowTimes.Add(hour + ":" + minute);
+
+
+                                }
+                                listHall.ListTime.Add(listTime);
+
+                            }
+                            showForViewDto.ListHall.Add(listHall);
+                            
+                        }
+                        showForViewDtos.Add(showForViewDto);
+                    }
+                    
+                }
 
                 var paginatedShowViews = new PaginatedList<ShowForViewDto>(
                     showForViewDtos,

@@ -315,7 +315,10 @@
           "WebAPIServer.Modules.Payment.Domain": "1.0.0"
         },
         "runtime": {
-          "WebAPIServer.Modules.Payment.Businesses.dll": {}
+          "WebAPIServer.Modules.Payment.Businesses.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "WebAPIServer.Modules.Payment.DataAccesses/1.0.0": {
@@ -326,7 +329,10 @@
           "WebAPIServer.Modules.Tickets.Domain": "1.0.0"
         },
         "runtime": {
-          "WebAPIServer.Modules.Payment.DataAccesses.dll": {}
+          "WebAPIServer.Modules.Payment.DataAccesses.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "WebAPIServer.Modules.Payment.Domain/1.0.0": {
@@ -335,7 +341,10 @@
           "WebAPIServer.Shared.Infrastructure": "1.0.0"
         },
         "runtime": {
-          "WebAPIServer.Modules.Payment.Domain.dll": {}
+          "WebAPIServer.Modules.Payment.Domain.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "WebAPIServer.Modules.Tickets.Businesses/1.0.0": {
@@ -343,7 +352,10 @@
           "WebAPIServer.Modules.Tickets.Domain": "1.0.0"
         },
         "runtime": {
-          "WebAPIServer.Modules.Tickets.Businesses.dll": {}
+          "WebAPIServer.Modules.Tickets.Businesses.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "WebAPIServer.Modules.Tickets.DataAccesses/1.0.0": {
@@ -352,7 +364,10 @@
           "WebAPIServer.Modules.Tickets.Domain": "1.0.0"
         },
         "runtime": {
-          "WebAPIServer.Modules.Tickets.DataAccesses.dll": {}
+          "WebAPIServer.Modules.Tickets.DataAccesses.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "WebAPIServer.Modules.Tickets.Domain/1.0.0": {
@@ -361,7 +376,10 @@
           "WebAPIServer.Shared.Infrastructure": "1.0.0"
         },
         "runtime": {
-          "WebAPIServer.Modules.Tickets.Domain.dll": {}
+          "WebAPIServer.Modules.Tickets.Domain.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "WebAPIServer.Shared.Abstractions/1.0.0": {
@@ -374,7 +392,10 @@
           "Refit.HttpClientFactory": "7.2.1"
         },
         "runtime": {
-          "WebAPIServer.Shared.Abstractions.dll": {}
+          "WebAPIServer.Shared.Abstractions.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "WebAPIServer.Shared.Infrastructure/1.0.0": {
@@ -389,7 +410,10 @@
           "WebAPIServer.Shared.Abstractions": "1.0.0"
         },
         "runtime": {
-          "WebAPIServer.Shared.Infrastructure.dll": {}
+          "WebAPIServer.Shared.Infrastructure.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }

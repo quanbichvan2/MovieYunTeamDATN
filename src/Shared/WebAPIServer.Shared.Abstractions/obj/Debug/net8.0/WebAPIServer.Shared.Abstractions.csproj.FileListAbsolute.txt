@@ -10,3 +10,16 @@ E:\FPT\DATN\NhómKhang\BE\newest\DuAnTotNghiep.WebAPIServer-dev\src\Shared\WebAP
 E:\FPT\DATN\NhómKhang\BE\newest\DuAnTotNghiep.WebAPIServer-dev\src\Shared\WebAPIServer.Shared.Abstractions\obj\Debug\net8.0\refint\WebAPIServer.Shared.Abstractions.dll
 E:\FPT\DATN\NhómKhang\BE\newest\DuAnTotNghiep.WebAPIServer-dev\src\Shared\WebAPIServer.Shared.Abstractions\obj\Debug\net8.0\WebAPIServer.Shared.Abstractions.pdb
 E:\FPT\DATN\NhómKhang\BE\newest\DuAnTotNghiep.WebAPIServer-dev\src\Shared\WebAPIServer.Shared.Abstractions\obj\Debug\net8.0\ref\WebAPIServer.Shared.Abstractions.dll
+D:\MovieYunTeamDATN\src\Shared\WebAPIServer.Shared.Abstractions\bin\Debug\net8.0\WebAPIServer.Shared.Abstractions.deps.json
+D:\MovieYunTeamDATN\src\Shared\WebAPIServer.Shared.Abstractions\bin\Debug\net8.0\WebAPIServer.Shared.Abstractions.dll
+D:\MovieYunTeamDATN\src\Shared\WebAPIServer.Shared.Abstractions\bin\Debug\net8.0\WebAPIServer.Shared.Abstractions.pdb
+D:\MovieYunTeamDATN\src\Shared\WebAPIServer.Shared.Abstractions\obj\Debug\net8.0\WebAPIServer.Shared.Abstractions.csproj.AssemblyReference.cache
+D:\MovieYunTeamDATN\src\Shared\WebAPIServer.Shared.Abstractions\obj\Debug\net8.0\WebAPIServer.Shared.Abstractions.GeneratedMSBuildEditorConfig.editorconfig
+D:\MovieYunTeamDATN\src\Shared\WebAPIServer.Shared.Abstractions\obj\Debug\net8.0\WebAPIServer.Shared.Abstractions.AssemblyInfoInputs.cache
+D:\MovieYunTeamDATN\src\Shared\WebAPIServer.Shared.Abstractions\obj\Debug\net8.0\WebAPIServer.Shared.Abstractions.AssemblyInfo.cs
+D:\MovieYunTeamDATN\src\Shared\WebAPIServer.Shared.Abstractions\obj\Debug\net8.0\WebAPIServer.Shared.Abstractions.csproj.CoreCompileInputs.cache
+D:\MovieYunTeamDATN\src\Shared\WebAPIServer.Shared.Abstractions\obj\Debug\net8.0\WebAPIServer.Shared.Abstractions.sourcelink.json
+D:\MovieYunTeamDATN\src\Shared\WebAPIServer.Shared.Abstractions\obj\Debug\net8.0\WebAPIServer.Shared.Abstractions.dll
+D:\MovieYunTeamDATN\src\Shared\WebAPIServer.Shared.Abstractions\obj\Debug\net8.0\refint\WebAPIServer.Shared.Abstractions.dll
+D:\MovieYunTeamDATN\src\Shared\WebAPIServer.Shared.Abstractions\obj\Debug\net8.0\WebAPIServer.Shared.Abstractions.pdb
+D:\MovieYunTeamDATN\src\Shared\WebAPIServer.Shared.Abstractions\obj\Debug\net8.0\ref\WebAPIServer.Shared.Abstractions.dll

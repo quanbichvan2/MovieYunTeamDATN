@@ -9,6 +9,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = WebAPIServer.Modules.Payment.Domain
-build_property.ProjectDir = E:\FPT\DATN\NhómKhang\BE\newest\DuAnTotNghiep.WebAPIServer-dev\src\Modules\Payment\WebAPIServer.Modules.Payment.Domain\
+build_property.ProjectDir = D:\MovieYunTeamDATN\src\Modules\Payment\WebAPIServer.Modules.Payment.Domain\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

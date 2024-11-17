@@ -52,11 +52,11 @@ namespace WebAPIServer.Modules.MovieManagement.Businesses.HandleShow.Commands
 				{
 					return ResponseExceptionHelper.ErrorResponse<Show>(ErrorCode.NotFound);
 				}
-				var hall = await _hallRepository.FindByIdAsync(showDto.CinemaHallId);
-				if (hall == null)
-				{
-					return ResponseExceptionHelper.ErrorResponse<Hall>(ErrorCode.NotFound);
-				}
+				//var hall = await _hallRepository.FindByIdAsync(showDto);
+				//if (hall == null)
+				//{
+				//	return ResponseExceptionHelper.ErrorResponse<Hall>(ErrorCode.NotFound);
+				//}
 				var movie = await _movieRepository.FindByIdAsync(showDto.MovieId);
 				if (movie == null)
 				{

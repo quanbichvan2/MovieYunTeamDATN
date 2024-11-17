@@ -37,31 +37,32 @@ namespace WebAPIServer.Modules.MovieManagement.Businesses.HandleHall.Commands
         {
             try
             {
-                var validationResult = await _validator.ValidateAsync(request.model);
-                if (!validationResult.IsValid)
-                {
-                    return ResponseExceptionHelper.ErrorResponse<Hall>(ErrorCode.UpdateError, validationResult.Errors);
-                }
-                var hall = await _hallRepository.FindByIdAsync(request.id);
-                if (hall is null)
-                {
-                    return ResponseExceptionHelper.ErrorResponse<Hall>(ErrorCode.NotFound);
-                }
-                _mapper.Map(request.model, hall);
-                foreach (var updatedSeat in request.model.Seats)
-                {
-                    var seat = hall.Seats.FirstOrDefault(s => s.Id == updatedSeat.Id);
-                    if(seat != null)
-                    {
-                        if(seat.SeatTypeId != updatedSeat.SeatTypeId)
-                        {
-                            var seatType = await _seatTypeRepository.FindByIdAsync(updatedSeat.SeatTypeId);
-                            seat.SeatTypeId = updatedSeat.SeatTypeId;
-                            seat.SeatTypeName = seatType.Name;
-                        }
-                    }
-                }
-                _hallRepository.Update(hall);
+
+                //    var validationResult = await _validator.ValidateAsync(request.model);
+                //    if (!validationResult.IsValid)
+                //    {
+                //        return ResponseExceptionHelper.ErrorResponse<Hall>(ErrorCode.UpdateError, validationResult.Errors);
+                //    }
+                //    var hall = await _hallRepository.FindByIdAsync(request.id);
+                //    if (hall is null)
+                //    {
+                //        return ResponseExceptionHelper.ErrorResponse<Hall>(ErrorCode.NotFound);
+                //    }
+                //    _mapper.Map(request.model, hall);
+                //    foreach (var updatedSeat in request.model.Seats)
+                //    {
+                //        var seat = hall.Seats.FirstOrDefault(s => s.Id == updatedSeat.Id);
+                //        if(seat != null)
+                //        {
+                //            if(seat.SeatTypeId != updatedSeat.SeatTypeId)
+                //            {
+                //                var seatType = await _seatTypeRepository.FindByIdAsync(updatedSeat.SeatTypeId);
+                //                seat.SeatTypeId = updatedSeat.SeatTypeId;
+                //                seat.SeatTypeName = seatType.Name;
+                //            }
+                //        }
+                //    }
+                //_hallRepository.Update(hall);
                 await _unitOfWork.SaveChangesAsync();
                 return true;
             }

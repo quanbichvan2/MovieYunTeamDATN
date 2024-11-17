@@ -54,5 +54,15 @@ namespace WebAPIServer.Modules.MovieManagement.Api.Controllers
 				_ => Ok(response.AsT0),
 				error => BadRequest(response.AsT1));
 		}
-	}
+
+        [HttpPost("CheckSeatStatusByHallIdAndSeatId")]
+        public async Task<IActionResult> CheckSeatStatusByHallIdAndSeatId([FromBody] CheckSeatStatusByHallIdAndSeatIdDto model)
+        {
+            var hall = new CheckSeatStatusByHallIdAndSeatIdCommand(model);
+            var response = await _mediator.Send(hall);
+            return response.Match<IActionResult>(
+                _ => Ok(response.AsT0),
+                error => BadRequest(response.AsT1));
+        }
+    }
 }

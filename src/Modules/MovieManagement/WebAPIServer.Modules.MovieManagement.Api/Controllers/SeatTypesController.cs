@@ -19,5 +19,13 @@ namespace WebAPIServer.Modules.MovieManagement.Api.Controllers
             var response = await _mediator.Send(seatTypes);
             return Ok(response);
         }
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetSeatTypeById(Guid id)
+        {
+            var seatType = new GetSeatTypeByIdQuery(id);
+            var response = await _mediator.Send(seatType);
+            return Ok(response);
+        }
     }
 }

@@ -52,15 +52,51 @@ namespace WebAPIServer.Modules.MovieManagement.Businesses.HandleShow.Queries
                     showForViewDto.Genres.Add(genre);
                 }
 
-                var show = _showRepository.GetAll().Where(x => x.MovieId == movie.Id).ToList();
-
-                foreach (var item in show)
+                //var show = _showRepository.GetAll().Where(x => x.MovieId == movie.Id).GroupBy(x => x.StartTime.Date).ToList();
+                var show1 = _showRepository.GetAll().Where(x => x.MovieId == movie.Id).GroupBy(x => x.CinemaHallId).ToList();
+                foreach (var group in show1)
                 {
-                    ShowTimeDto showTimeDto = new ShowTimeDto();
-                    showTimeDto.StartTime = item.StartTime;
-                    showTimeDto.Time = item.StartTime.Hour + ":" + item.StartTime.Minute;
-                    showForViewDto.ShowTimes.Add(showTimeDto);
+                    var groupHall = group.GroupBy(x => x.StartTime.Date).ToList();
+                    ListHall listHall = new ListHall();
+                    foreach (var item in groupHall)
+                    {
+                        ListTime listTime = new ListTime();
+                        foreach (var item1 in item)
+                        {
+                            var hall = await _hallRepository.GetByIdAsync(item1.CinemaHallId);
+                            listHall.HallId = hall.Id;
+                            listHall.HallName = hall.Name;
+
+                            
+                            listTime.StartTime = item1.StartTime.Day + "-" + item1.StartTime.Month + "-" + item1.StartTime.Year;
+                            var hour = item1.StartTime.Hour.ToString().Length == 2 ? item1.StartTime.Hour.ToString() : ("0" + item1.StartTime.Hour.ToString());
+                            var minute = item1.StartTime.Minute.ToString().Length == 2 ? item1.StartTime.Minute.ToString() : ("0" + item1.StartTime.Minute.ToString());
+                            listTime.ShowTimes.Add(hour + ":" + minute);
+
+                            
+                        }
+                        listHall.ListTime.Add(listTime);
+                        
+                    }
+                    showForViewDto.ListHall.Add(listHall);
+
                 }
+
+                //foreach (var group in show)
+                //{
+                //    ListTime listTime = new ListTime();
+                //    foreach (var item in group)
+                //    {
+                //        listTime.StartTime = item.StartTime.Date;
+                //        var hall = await _hallRepository.GetByIdAsync(item.CinemaHallId);
+                //        //listTime.HallId = hall.Id;
+                //        //listTime.HallName = hall.Name;
+                //        var hour = item.StartTime.Hour.ToString().Length == 2 ? item.StartTime.Hour.ToString() : ("0" + item.StartTime.Hour.ToString());
+                //        var minute = item.StartTime.Minute.ToString().Length == 2 ? item.StartTime.Minute.ToString() : ("0" + item.StartTime.Minute.ToString());
+                //        listTime.ShowTimes.Add( hour + ":" + minute);
+                //    }
+                //    showForViewDto.ListTime.Add(listTime);
+                //}
 
                 return showForViewDto;
             }

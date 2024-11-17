@@ -4,7 +4,7 @@ using RabbitMQ.Client;
 using System.Reflection;
 using WebAPIServer.Modules.Booking.Businesses;
 using WebAPIServer.Modules.Booking.Businesses.Contracts;
-using WebAPIServer.Modules.Booking.Businesses.HandleOrder.Backgounds;
+//using WebAPIServer.Modules.Booking.Businesses.HandleOrder.Backgounds;
 using WebAPIServer.Modules.Booking.Businesses.HandleOrder.Commands;
 using WebAPIServer.Modules.Booking.Businesses.HandleOrder.Models;
 using WebAPIServer.Modules.Booking.Businesses.HandleOrder.Validations;
@@ -24,7 +24,7 @@ namespace WebAPIServer.Modules.Booking.Api.Extentions
 
             services.AddScoped<IValidator<OrderForCreateDto>, OrderForCreateDtoValidation>();
             services.AddScoped<IValidator<OrderForUpdateDto>, OrderForUpdateDtoValidation>();
-			services.AddHostedService<OrderStatusBackgroundService>();
+			//services.AddHostedService<OrderStatusBackgroundService>();
 			return services;
         }
 

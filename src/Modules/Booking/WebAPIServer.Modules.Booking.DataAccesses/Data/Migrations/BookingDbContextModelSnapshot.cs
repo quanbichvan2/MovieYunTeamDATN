@@ -29,21 +29,13 @@ namespace WebAPIServer.Modules.Booking.DataAccesses.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
 
-                    b.Property<double?>("Amount")
+                    b.Property<double>("Amount")
                         .HasColumnType("double precision");
-
-                    b.Property<string>("CinemaName")
-                        .IsRequired()
-                        .HasColumnType("text");
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("CreatedBy")
-                        .HasColumnType("text");
-
-                    b.Property<string>("HallName")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<bool>("IsActived")
@@ -58,43 +50,14 @@ namespace WebAPIServer.Modules.Booking.DataAccesses.Data.Migrations
                     b.Property<string>("ModifiedBy")
                         .HasColumnType("text");
 
-                    b.Property<string>("MovieTitle")
-                        .HasColumnType("text");
-
-                    b.Property<string>("OrderStatus")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<Guid>("OrderStatusId")
-                        .HasColumnType("uuid");
-
-                    b.Property<Guid?>("PaymentId")
-                        .HasColumnType("uuid");
-
-                    b.Property<DateTimeOffset?>("ShowEndAt")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.Property<Guid>("ShowId")
-                        .HasColumnType("uuid");
-
-                    b.Property<DateTimeOffset?>("ShowStartAt")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.Property<string>("ShowStartEndTime")
-                        .HasColumnType("text");
-
-                    b.Property<double?>("SubAmount")
+                    b.Property<double>("NetAmount")
                         .HasColumnType("double precision");
 
-                    b.Property<Guid>("TicketTypeId")
+                    b.Property<Guid>("PaymentId")
                         .HasColumnType("uuid");
 
-                    b.Property<string>("TicketTypeName")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<double>("TicketTypePrice")
-                        .HasColumnType("double precision");
+                    b.Property<Guid>("StatusId")
+                        .HasColumnType("uuid");
 
                     b.Property<Guid?>("UserId")
                         .HasColumnType("uuid");
@@ -106,6 +69,8 @@ namespace WebAPIServer.Modules.Booking.DataAccesses.Data.Migrations
                         .HasColumnType("uuid");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("StatusId");
 
                     b.ToTable("Orders", "booking");
                 });
@@ -123,91 +88,78 @@ namespace WebAPIServer.Modules.Booking.DataAccesses.Data.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
+                    b.Property<string>("ComboTypeName")
+                        .IsRequired()
+                        .HasColumnType("text");
+
                     b.Property<Guid>("OrderId")
                         .HasColumnType("uuid");
+
+                    b.Property<double>("Price")
+                        .HasColumnType("double precision");
 
                     b.Property<int>("Quantity")
                         .HasColumnType("integer");
 
-                    b.Property<double>("TotalPrice")
-                        .HasColumnType("double precision");
-
-                    b.Property<double>("UnitPrice")
-                        .HasColumnType("double precision");
-
                     b.HasKey("Id");
-
-                    b.HasIndex("OrderId");
 
                     b.ToTable("OrderCombos", "booking");
                 });
 
-            modelBuilder.Entity("WebAPIServer.Modules.Booking.Domain.Entities.OrderProduct", b =>
+            modelBuilder.Entity("WebAPIServer.Modules.Booking.Domain.Entities.OrderMovie", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
 
+                    b.Property<Guid>("HallId")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("HallName")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("MovieTitle")
+                        .HasColumnType("text");
+
                     b.Property<Guid>("OrderId")
                         .HasColumnType("uuid");
 
-                    b.Property<Guid>("ProductId")
-                        .HasColumnType("uuid");
-
-                    b.Property<string>("ProductName")
-                        .IsRequired()
-                        .HasColumnType("text");
+                    b.Property<double>("Price")
+                        .HasColumnType("double precision");
 
                     b.Property<int>("Quantity")
                         .HasColumnType("integer");
 
-                    b.Property<double>("TotalPrice")
-                        .HasColumnType("double precision");
-
-                    b.Property<double>("UnitPrice")
-                        .HasColumnType("double precision");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("OrderId");
-
-                    b.ToTable("OrderProducts", "booking");
-                });
-
-            modelBuilder.Entity("WebAPIServer.Modules.Booking.Domain.Entities.OrderShowSeat", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid");
-
-                    b.Property<bool>("IsReseved")
-                        .HasColumnType("boolean");
-
-                    b.Property<Guid>("OrderId")
-                        .HasColumnType("uuid");
-
                     b.Property<Guid>("SeatId")
                         .HasColumnType("uuid");
 
-                    b.Property<string>("SeatPosition")
+                    b.Property<string>("SeatName")
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<string>("SeatTypeName")
-                        .IsRequired()
-                        .HasColumnType("text");
+                    b.Property<DateTimeOffset?>("ShowEndAt")
+                        .HasColumnType("timestamp with time zone");
 
-                    b.Property<double>("SeatTypePrice")
-                        .HasColumnType("double precision");
-
-                    b.Property<Guid?>("ShowId")
+                    b.Property<Guid>("ShowId")
                         .HasColumnType("uuid");
+
+                    b.Property<DateTimeOffset?>("ShowStartAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("ShowStartEndTime")
+                        .HasColumnType("text");
+
+                    b.Property<Guid>("TypeId")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("TypeName")
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("OrderId");
-
-                    b.ToTable("OrderShowSeats", "booking");
+                    b.ToTable("OrderMovies", "booking");
                 });
 
             modelBuilder.Entity("WebAPIServer.Modules.Booking.Domain.Entities.OrderStatus", b =>
@@ -225,46 +177,15 @@ namespace WebAPIServer.Modules.Booking.DataAccesses.Data.Migrations
                     b.ToTable("OrderStatuses", "booking");
                 });
 
-            modelBuilder.Entity("WebAPIServer.Modules.Booking.Domain.Entities.OrderCombo", b =>
-                {
-                    b.HasOne("WebAPIServer.Modules.Booking.Domain.Entities.Order", "Order")
-                        .WithMany("Combos")
-                        .HasForeignKey("OrderId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Order");
-                });
-
-            modelBuilder.Entity("WebAPIServer.Modules.Booking.Domain.Entities.OrderProduct", b =>
-                {
-                    b.HasOne("WebAPIServer.Modules.Booking.Domain.Entities.Order", "Order")
-                        .WithMany("Products")
-                        .HasForeignKey("OrderId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Order");
-                });
-
-            modelBuilder.Entity("WebAPIServer.Modules.Booking.Domain.Entities.OrderShowSeat", b =>
-                {
-                    b.HasOne("WebAPIServer.Modules.Booking.Domain.Entities.Order", "Order")
-                        .WithMany("ShowSeats")
-                        .HasForeignKey("OrderId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Order");
-                });
-
             modelBuilder.Entity("WebAPIServer.Modules.Booking.Domain.Entities.Order", b =>
                 {
-                    b.Navigation("Combos");
+                    b.HasOne("WebAPIServer.Modules.Booking.Domain.Entities.OrderStatus", "Status")
+                        .WithMany()
+                        .HasForeignKey("StatusId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
-                    b.Navigation("Products");
-
-                    b.Navigation("ShowSeats");
+                    b.Navigation("Status");
                 });
 #pragma warning restore 612, 618
         }

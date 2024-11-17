@@ -1776,24 +1776,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Yun PC\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\ASUS\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\FPT\\DATN\\NhómKhang\\BE\\newest\\DuAnTotNghiep.WebAPIServer-dev\\src\\Modules\\MovieManagement\\WebAPIServer.Modules.MovieManagement.Api\\WebAPIServer.Modules.MovieManagement.Api.csproj",
+      "projectUniqueName": "D:\\MovieYunTeamDATN\\src\\Modules\\MovieManagement\\WebAPIServer.Modules.MovieManagement.Api\\WebAPIServer.Modules.MovieManagement.Api.csproj",
       "projectName": "WebAPIServer.Modules.MovieManagement.Api",
-      "projectPath": "E:\\FPT\\DATN\\NhómKhang\\BE\\newest\\DuAnTotNghiep.WebAPIServer-dev\\src\\Modules\\MovieManagement\\WebAPIServer.Modules.MovieManagement.Api\\WebAPIServer.Modules.MovieManagement.Api.csproj",
-      "packagesPath": "C:\\Users\\Yun PC\\.nuget\\packages\\",
-      "outputPath": "E:\\FPT\\DATN\\NhómKhang\\BE\\newest\\DuAnTotNghiep.WebAPIServer-dev\\src\\Modules\\MovieManagement\\WebAPIServer.Modules.MovieManagement.Api\\obj\\",
+      "projectPath": "D:\\MovieYunTeamDATN\\src\\Modules\\MovieManagement\\WebAPIServer.Modules.MovieManagement.Api\\WebAPIServer.Modules.MovieManagement.Api.csproj",
+      "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
+      "outputPath": "D:\\MovieYunTeamDATN\\src\\Modules\\MovieManagement\\WebAPIServer.Modules.MovieManagement.Api\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Yun PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1808,8 +1803,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "E:\\FPT\\DATN\\NhómKhang\\BE\\newest\\DuAnTotNghiep.WebAPIServer-dev\\src\\Modules\\MovieManagement\\WebAPIServer.Modules.MovieManagement.DataAccesses\\WebAPIServer.Modules.MovieManagement.DataAccesses.csproj": {
-              "projectPath": "E:\\FPT\\DATN\\NhómKhang\\BE\\newest\\DuAnTotNghiep.WebAPIServer-dev\\src\\Modules\\MovieManagement\\WebAPIServer.Modules.MovieManagement.DataAccesses\\WebAPIServer.Modules.MovieManagement.DataAccesses.csproj"
+            "D:\\MovieYunTeamDATN\\src\\Modules\\MovieManagement\\WebAPIServer.Modules.MovieManagement.DataAccesses\\WebAPIServer.Modules.MovieManagement.DataAccesses.csproj": {
+              "projectPath": "D:\\MovieYunTeamDATN\\src\\Modules\\MovieManagement\\WebAPIServer.Modules.MovieManagement.DataAccesses\\WebAPIServer.Modules.MovieManagement.DataAccesses.csproj"
             }
           }
         }
@@ -1844,7 +1839,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

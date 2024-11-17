@@ -311,7 +311,10 @@
           "WebAPIServer.Modules.MovieManagement.Domain": "1.0.0"
         },
         "runtime": {
-          "WebAPIServer.Modules.MovieManagement.Businesses.dll": {}
+          "WebAPIServer.Modules.MovieManagement.Businesses.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "WebAPIServer.Modules.MovieManagement.DataAccesses/1.0.0": {
@@ -320,7 +323,10 @@
           "WebAPIServer.Modules.MovieManagement.Businesses": "1.0.0"
         },
         "runtime": {
-          "WebAPIServer.Modules.MovieManagement.DataAccesses.dll": {}
+          "WebAPIServer.Modules.MovieManagement.DataAccesses.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "WebAPIServer.Modules.MovieManagement.Domain/1.0.0": {
@@ -329,7 +335,10 @@
           "WebAPIServer.Shared.Infrastructure": "1.0.0"
         },
         "runtime": {
-          "WebAPIServer.Modules.MovieManagement.Domain.dll": {}
+          "WebAPIServer.Modules.MovieManagement.Domain.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "WebAPIServer.Shared.Abstractions/1.0.0": {
@@ -342,7 +351,10 @@
           "Refit.HttpClientFactory": "7.2.1"
         },
         "runtime": {
-          "WebAPIServer.Shared.Abstractions.dll": {}
+          "WebAPIServer.Shared.Abstractions.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "WebAPIServer.Shared.Infrastructure/1.0.0": {
@@ -357,7 +369,10 @@
           "WebAPIServer.Shared.Abstractions": "1.0.0"
         },
         "runtime": {
-          "WebAPIServer.Shared.Infrastructure.dll": {}
+          "WebAPIServer.Shared.Infrastructure.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }

@@ -1913,24 +1913,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Yun PC\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\ASUS\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\FPT\\DATN\\NhómKhang\\BE\\newest\\DuAnTotNghiep.WebAPIServer-dev\\src\\Modules\\Payment\\WebAPIServer.Modules.Payment.Api\\WebAPIServer.Modules.Payment.Api.csproj",
+      "projectUniqueName": "D:\\MovieYunTeamDATN\\src\\Modules\\Payment\\WebAPIServer.Modules.Payment.Api\\WebAPIServer.Modules.Payment.Api.csproj",
       "projectName": "WebAPIServer.Modules.Payment.Api",
-      "projectPath": "E:\\FPT\\DATN\\NhómKhang\\BE\\newest\\DuAnTotNghiep.WebAPIServer-dev\\src\\Modules\\Payment\\WebAPIServer.Modules.Payment.Api\\WebAPIServer.Modules.Payment.Api.csproj",
-      "packagesPath": "C:\\Users\\Yun PC\\.nuget\\packages\\",
-      "outputPath": "E:\\FPT\\DATN\\NhómKhang\\BE\\newest\\DuAnTotNghiep.WebAPIServer-dev\\src\\Modules\\Payment\\WebAPIServer.Modules.Payment.Api\\obj\\",
+      "projectPath": "D:\\MovieYunTeamDATN\\src\\Modules\\Payment\\WebAPIServer.Modules.Payment.Api\\WebAPIServer.Modules.Payment.Api.csproj",
+      "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
+      "outputPath": "D:\\MovieYunTeamDATN\\src\\Modules\\Payment\\WebAPIServer.Modules.Payment.Api\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Yun PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1945,11 +1940,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "E:\\FPT\\DATN\\NhómKhang\\BE\\newest\\DuAnTotNghiep.WebAPIServer-dev\\src\\Modules\\Payment\\WebAPIServer.Modules.Payment.Businesses\\WebAPIServer.Modules.Payment.Businesses.csproj": {
-              "projectPath": "E:\\FPT\\DATN\\NhómKhang\\BE\\newest\\DuAnTotNghiep.WebAPIServer-dev\\src\\Modules\\Payment\\WebAPIServer.Modules.Payment.Businesses\\WebAPIServer.Modules.Payment.Businesses.csproj"
+            "D:\\MovieYunTeamDATN\\src\\Modules\\Payment\\WebAPIServer.Modules.Payment.Businesses\\WebAPIServer.Modules.Payment.Businesses.csproj": {
+              "projectPath": "D:\\MovieYunTeamDATN\\src\\Modules\\Payment\\WebAPIServer.Modules.Payment.Businesses\\WebAPIServer.Modules.Payment.Businesses.csproj"
             },
-            "E:\\FPT\\DATN\\NhómKhang\\BE\\newest\\DuAnTotNghiep.WebAPIServer-dev\\src\\Modules\\Payment\\WebAPIServer.Modules.Payment.DataAccesses\\WebAPIServer.Modules.Payment.DataAccesses.csproj": {
-              "projectPath": "E:\\FPT\\DATN\\NhómKhang\\BE\\newest\\DuAnTotNghiep.WebAPIServer-dev\\src\\Modules\\Payment\\WebAPIServer.Modules.Payment.DataAccesses\\WebAPIServer.Modules.Payment.DataAccesses.csproj"
+            "D:\\MovieYunTeamDATN\\src\\Modules\\Payment\\WebAPIServer.Modules.Payment.DataAccesses\\WebAPIServer.Modules.Payment.DataAccesses.csproj": {
+              "projectPath": "D:\\MovieYunTeamDATN\\src\\Modules\\Payment\\WebAPIServer.Modules.Payment.DataAccesses\\WebAPIServer.Modules.Payment.DataAccesses.csproj"
             }
           }
         }
@@ -1984,7 +1979,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

@@ -13,9 +13,9 @@ namespace WebAPIServer.Modules.Booking.DataAccesses.Repositories
 		public override Task<Order?> GetByIdAsync(Guid? id)
 		{
 			return _context.Orders
-				.Include(x => x.Combos)
-				.Include(x => x.Products)
-				.Include(x => x.ShowSeats)
+				//.Include(x => x.Combos)
+				//.Include(x => x.Products)
+				//.Include(x => x.ShowSeats)
 				.FirstOrDefaultAsync(x => x.Id.Equals(id));
 		}
 		public async Task<string> GetStatusByIdAsync(Guid statusId)

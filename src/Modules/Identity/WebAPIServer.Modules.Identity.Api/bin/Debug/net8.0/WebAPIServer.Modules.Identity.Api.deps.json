@@ -408,7 +408,10 @@
           "WebAPIServer.Modules.Identity.Domain": "1.0.0"
         },
         "runtime": {
-          "WebAPIServer.Modules.Identity.Businesses.dll": {}
+          "WebAPIServer.Modules.Identity.Businesses.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "WebAPIServer.Modules.Identity.DataAccesses/1.0.0": {
@@ -417,7 +420,10 @@
           "WebAPIServer.Modules.Identity.Domain": "1.0.0"
         },
         "runtime": {
-          "WebAPIServer.Modules.Identity.DataAccesses.dll": {}
+          "WebAPIServer.Modules.Identity.DataAccesses.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "WebAPIServer.Modules.Identity.Domain/1.0.0": {
@@ -426,7 +432,10 @@
           "WebAPIServer.Shared.Infrastructure": "1.0.0"
         },
         "runtime": {
-          "WebAPIServer.Modules.Identity.Domain.dll": {}
+          "WebAPIServer.Modules.Identity.Domain.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "WebAPIServer.Shared.Abstractions/1.0.0": {
@@ -439,7 +448,10 @@
           "Refit.HttpClientFactory": "7.2.1"
         },
         "runtime": {
-          "WebAPIServer.Shared.Abstractions.dll": {}
+          "WebAPIServer.Shared.Abstractions.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "WebAPIServer.Shared.Infrastructure/1.0.0": {
@@ -454,7 +466,10 @@
           "WebAPIServer.Shared.Abstractions": "1.0.0"
         },
         "runtime": {
-          "WebAPIServer.Shared.Infrastructure.dll": {}
+          "WebAPIServer.Shared.Infrastructure.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }

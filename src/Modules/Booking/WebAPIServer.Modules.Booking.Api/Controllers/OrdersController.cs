@@ -62,5 +62,5 @@ namespace WebAPIServer.Modules.Booking.Api.Controllers
 				_ => Ok(response.AsT0),
 				error => BadRequest(response.AsT1));
 		}
-	}
+    }
 }

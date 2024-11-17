@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\FPT\\DATN\\NhómKhang\\BE\\newest\\DuAnTotNghiep.WebAPIServer-dev\\src\\Modules\\Booking\\WebAPIServer.Modules.Booking.Domain\\WebAPIServer.Modules.Booking.Domain.csproj": {}
+    "D:\\MovieYunTeamDATN\\src\\Modules\\Booking\\WebAPIServer.Modules.Booking.Domain\\WebAPIServer.Modules.Booking.Domain.csproj": {}
   },
   "projects": {
-    "E:\\FPT\\DATN\\NhómKhang\\BE\\newest\\DuAnTotNghiep.WebAPIServer-dev\\src\\Modules\\Booking\\WebAPIServer.Modules.Booking.Domain\\WebAPIServer.Modules.Booking.Domain.csproj": {
+    "D:\\MovieYunTeamDATN\\src\\Modules\\Booking\\WebAPIServer.Modules.Booking.Domain\\WebAPIServer.Modules.Booking.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\FPT\\DATN\\NhómKhang\\BE\\newest\\DuAnTotNghiep.WebAPIServer-dev\\src\\Modules\\Booking\\WebAPIServer.Modules.Booking.Domain\\WebAPIServer.Modules.Booking.Domain.csproj",
+        "projectUniqueName": "D:\\MovieYunTeamDATN\\src\\Modules\\Booking\\WebAPIServer.Modules.Booking.Domain\\WebAPIServer.Modules.Booking.Domain.csproj",
         "projectName": "WebAPIServer.Modules.Booking.Domain",
-        "projectPath": "E:\\FPT\\DATN\\NhómKhang\\BE\\newest\\DuAnTotNghiep.WebAPIServer-dev\\src\\Modules\\Booking\\WebAPIServer.Modules.Booking.Domain\\WebAPIServer.Modules.Booking.Domain.csproj",
-        "packagesPath": "C:\\Users\\Yun PC\\.nuget\\packages\\",
-        "outputPath": "E:\\FPT\\DATN\\NhómKhang\\BE\\newest\\DuAnTotNghiep.WebAPIServer-dev\\src\\Modules\\Booking\\WebAPIServer.Modules.Booking.Domain\\obj\\",
+        "projectPath": "D:\\MovieYunTeamDATN\\src\\Modules\\Booking\\WebAPIServer.Modules.Booking.Domain\\WebAPIServer.Modules.Booking.Domain.csproj",
+        "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
+        "outputPath": "D:\\MovieYunTeamDATN\\src\\Modules\\Booking\\WebAPIServer.Modules.Booking.Domain\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Yun PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -33,11 +29,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "E:\\FPT\\DATN\\NhómKhang\\BE\\newest\\DuAnTotNghiep.WebAPIServer-dev\\src\\Shared\\WebAPIServer.Shared.Abstractions\\WebAPIServer.Shared.Abstractions.csproj": {
-                "projectPath": "E:\\FPT\\DATN\\NhómKhang\\BE\\newest\\DuAnTotNghiep.WebAPIServer-dev\\src\\Shared\\WebAPIServer.Shared.Abstractions\\WebAPIServer.Shared.Abstractions.csproj"
+              "D:\\MovieYunTeamDATN\\src\\Shared\\WebAPIServer.Shared.Abstractions\\WebAPIServer.Shared.Abstractions.csproj": {
+                "projectPath": "D:\\MovieYunTeamDATN\\src\\Shared\\WebAPIServer.Shared.Abstractions\\WebAPIServer.Shared.Abstractions.csproj"
               },
-              "E:\\FPT\\DATN\\NhómKhang\\BE\\newest\\DuAnTotNghiep.WebAPIServer-dev\\src\\Shared\\WebAPIServer.Shared.Infrastructure\\WebAPIServer.Shared.Infrastructure.csproj": {
-                "projectPath": "E:\\FPT\\DATN\\NhómKhang\\BE\\newest\\DuAnTotNghiep.WebAPIServer-dev\\src\\Shared\\WebAPIServer.Shared.Infrastructure\\WebAPIServer.Shared.Infrastructure.csproj"
+              "D:\\MovieYunTeamDATN\\src\\Shared\\WebAPIServer.Shared.Infrastructure\\WebAPIServer.Shared.Infrastructure.csproj": {
+                "projectPath": "D:\\MovieYunTeamDATN\\src\\Shared\\WebAPIServer.Shared.Infrastructure\\WebAPIServer.Shared.Infrastructure.csproj"
               }
             }
           }
@@ -72,25 +68,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\FPT\\DATN\\NhómKhang\\BE\\newest\\DuAnTotNghiep.WebAPIServer-dev\\src\\Shared\\WebAPIServer.Shared.Abstractions\\WebAPIServer.Shared.Abstractions.csproj": {
+    "D:\\MovieYunTeamDATN\\src\\Shared\\WebAPIServer.Shared.Abstractions\\WebAPIServer.Shared.Abstractions.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\FPT\\DATN\\NhómKhang\\BE\\newest\\DuAnTotNghiep.WebAPIServer-dev\\src\\Shared\\WebAPIServer.Shared.Abstractions\\WebAPIServer.Shared.Abstractions.csproj",
+        "projectUniqueName": "D:\\MovieYunTeamDATN\\src\\Shared\\WebAPIServer.Shared.Abstractions\\WebAPIServer.Shared.Abstractions.csproj",
         "projectName": "WebAPIServer.Shared.Abstractions",
-        "projectPath": "E:\\FPT\\DATN\\NhómKhang\\BE\\newest\\DuAnTotNghiep.WebAPIServer-dev\\src\\Shared\\WebAPIServer.Shared.Abstractions\\WebAPIServer.Shared.Abstractions.csproj",
-        "packagesPath": "C:\\Users\\Yun PC\\.nuget\\packages\\",
-        "outputPath": "E:\\FPT\\DATN\\NhómKhang\\BE\\newest\\DuAnTotNghiep.WebAPIServer-dev\\src\\Shared\\WebAPIServer.Shared.Abstractions\\obj\\",
+        "projectPath": "D:\\MovieYunTeamDATN\\src\\Shared\\WebAPIServer.Shared.Abstractions\\WebAPIServer.Shared.Abstractions.csproj",
+        "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
+        "outputPath": "D:\\MovieYunTeamDATN\\src\\Shared\\WebAPIServer.Shared.Abstractions\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Yun PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -163,25 +155,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\FPT\\DATN\\NhómKhang\\BE\\newest\\DuAnTotNghiep.WebAPIServer-dev\\src\\Shared\\WebAPIServer.Shared.Infrastructure\\WebAPIServer.Shared.Infrastructure.csproj": {
+    "D:\\MovieYunTeamDATN\\src\\Shared\\WebAPIServer.Shared.Infrastructure\\WebAPIServer.Shared.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\FPT\\DATN\\NhómKhang\\BE\\newest\\DuAnTotNghiep.WebAPIServer-dev\\src\\Shared\\WebAPIServer.Shared.Infrastructure\\WebAPIServer.Shared.Infrastructure.csproj",
+        "projectUniqueName": "D:\\MovieYunTeamDATN\\src\\Shared\\WebAPIServer.Shared.Infrastructure\\WebAPIServer.Shared.Infrastructure.csproj",
         "projectName": "WebAPIServer.Shared.Infrastructure",
-        "projectPath": "E:\\FPT\\DATN\\NhómKhang\\BE\\newest\\DuAnTotNghiep.WebAPIServer-dev\\src\\Shared\\WebAPIServer.Shared.Infrastructure\\WebAPIServer.Shared.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\Yun PC\\.nuget\\packages\\",
-        "outputPath": "E:\\FPT\\DATN\\NhómKhang\\BE\\newest\\DuAnTotNghiep.WebAPIServer-dev\\src\\Shared\\WebAPIServer.Shared.Infrastructure\\obj\\",
+        "projectPath": "D:\\MovieYunTeamDATN\\src\\Shared\\WebAPIServer.Shared.Infrastructure\\WebAPIServer.Shared.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
+        "outputPath": "D:\\MovieYunTeamDATN\\src\\Shared\\WebAPIServer.Shared.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Yun PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -196,8 +184,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "E:\\FPT\\DATN\\NhómKhang\\BE\\newest\\DuAnTotNghiep.WebAPIServer-dev\\src\\Shared\\WebAPIServer.Shared.Abstractions\\WebAPIServer.Shared.Abstractions.csproj": {
-                "projectPath": "E:\\FPT\\DATN\\NhómKhang\\BE\\newest\\DuAnTotNghiep.WebAPIServer-dev\\src\\Shared\\WebAPIServer.Shared.Abstractions\\WebAPIServer.Shared.Abstractions.csproj"
+              "D:\\MovieYunTeamDATN\\src\\Shared\\WebAPIServer.Shared.Abstractions\\WebAPIServer.Shared.Abstractions.csproj": {
+                "projectPath": "D:\\MovieYunTeamDATN\\src\\Shared\\WebAPIServer.Shared.Abstractions\\WebAPIServer.Shared.Abstractions.csproj"
               }
             }
           }
@@ -265,7 +253,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

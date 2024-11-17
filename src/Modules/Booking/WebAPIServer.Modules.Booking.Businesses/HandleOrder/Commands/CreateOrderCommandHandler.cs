@@ -16,7 +16,7 @@ using WebAPIServer.Shared.Abstractions.Exceptions;
 
 namespace WebAPIServer.Modules.Booking.Businesses.HandleOrder.Commands
 {
-	public class CreateOrderCommandHandler : IRequestHandler<CreateOrderCommand, OneOf<Guid, ResponseException>>
+    public class CreateOrderCommandHandler : IRequestHandler<CreateOrderCommand, OneOf<Guid, ResponseException>>
 	{
 		private readonly ILogger<CreateOrderCommandHandler> _logger;
 		private readonly IOrderRepository _orderRepository;
@@ -53,99 +53,94 @@ namespace WebAPIServer.Modules.Booking.Businesses.HandleOrder.Commands
 				{
 					return ResponseExceptionHelper.ErrorResponse<Order>(ErrorCode.CreateError, validationResult.Errors);
 				}
-				var order = _mapper.Map<Order>(request.Model);
-				// maping ManagementMovie.Show to Booking.ShowDto
-				var show = await _movieManagementModuleApi.GetShowByIdAsync(order.ShowId);
-				if (show == null)
-				{
-					return ResponseExceptionHelper.ErrorResponse<ShowDto>(ErrorCode.NotFound);
-				}
-				order.CreatedAt = DateTime.UtcNow;
-				order.CinemaName = show.CinemaName;
-				order.HallName = show.HallName;
-				order.MovieTitle = show.MovieTitle;
-				order.ShowEndAt = show.EndTime;
-				order.ShowStartAt = show.StartTime;
-				order.ShowStartEndTime = $"{show.StartTime} - {show.EndTime}";
-				
-				// maping tickets.ticketType to TicketTypeDto
-				var ticketType = await _ticketsModuleApi.GetTicketTypeById(order.TicketTypeId);
-				if (ticketType == null)
-				{
-					return ResponseExceptionHelper.ErrorResponse<TicketTypeDto>(ErrorCode.NotFound);
-				}
-				order.TicketTypeName = ticketType.Name;
-				order.TicketTypePrice = ticketType.Price;
 
-				// maping showSeat to ShowSeatDto
-				var hall = await _movieManagementModuleApi.GetHallByIdAsync(show.CinemaHallId);
-				if (hall == null)
+                //update on redis
+
+                var order = new Order();
+                order.CreatedAt = DateTime.UtcNow;
+                //public Guid? UserId { get; set; }
+                //public string? UserName { get; set; }
+                //public Guid? VoucherId { get; set; }
+                order.PaymentId = request.Model.PaymentId;
+                order.StatusId = OrderStatusConstants.Confirmed;
+
+
+				foreach (var item in request.Model?.Line)
 				{
-					return ResponseExceptionHelper.ErrorResponse<HallDto>(ErrorCode.NotFound);
-				}
-				foreach (var showSeatDto in order.ShowSeats)
-				{
-					var seat = hall.Seats.FirstOrDefault(x => x.Id == showSeatDto.SeatId);
-					if (seat == null)
+					var show = await _movieManagementModuleApi.GetShowByIdAsync(item.ShowId);
+					if (show == null)
 					{
-						return ResponseExceptionHelper.ErrorResponse<OrderShowSeat>(ErrorCode.NotFound);
+						return ResponseExceptionHelper.ErrorResponse<ShowDto>(ErrorCode.NotFound);
 					}
-					//TODO: xử lí thêm race condition ở đây
-					if (showSeatDto.Id == seat.Id & showSeatDto.IsReseved)
+
+					var ticketType = await _ticketsModuleApi.GetTicketTypeById(item.TypeId);
+					if (ticketType == null)
 					{
-						return ResponseExceptionHelper.ErrorResponse<OrderShowSeat>(ErrorCode.SeatReserved);
+						return ResponseExceptionHelper.ErrorResponse<TicketTypeDto>(ErrorCode.NotFound);
 					}
-					showSeatDto.ShowId = show.Id;
-					showSeatDto.SeatId = seat.Id;
-					showSeatDto.SeatPosition = seat.SeatPosition;
-					showSeatDto.SeatTypeName = seat.SeatTypeName;
-					showSeatDto.SeatTypePrice = seat.SeatTypePrice + order.TicketTypePrice;
-				}
-				// maping catalog.product to ProductDto
-				foreach (var productDto in order.Products)
-				{
-					var product = await _catalogModuleApi.GetProductByIdAsync(productDto.ProductId);
-					if (product == null)
+
+					var hall = await _movieManagementModuleApi.GetHallByIdAsync(show.Id);
+					if (hall == null)
 					{
-						return ResponseExceptionHelper.ErrorResponse<ProductDto>(ErrorCode.NotFound);
+						return ResponseExceptionHelper.ErrorResponse<HallDto>(ErrorCode.NotFound);
 					}
-					productDto.ProductName = product.Name;
-					productDto.UnitPrice = product.Price;
-					productDto.TotalPrice = productDto.UnitPrice * productDto.Quantity;
+					var seat = hall.Seats.Where(x => x.Id == item.SeatId).FirstOrDefault();
+
+
+					var line = new OrderMovie();
+					line.OrderId = order.Id;
+					line.ShowId = show.Id;
+					line.Price = ticketType.Price + seat.SeatTypePrice;
+					line.SeatId = seat.Id;
+					line.SeatName = seat.SeatPosition;
+					line.TypeId = ticketType.Id;
+					line.TypeName = ticketType.Name;
+					line.HallId = show.CinemaHallId;
+					line.HallName = show.HallName;
+					line.ShowEndAt = show.EndTime;
+					line.ShowStartAt = show.StartTime;
+					line.ShowStartEndTime = $"{show.StartTime} - {show.EndTime}";
+					line.MovieTitle = show.MovieTitle;
+
+					order.Amount += line.Price;
 				}
 
-				// maping catalog.Combo to comboDto
-				foreach (var comboDto in order.Combos)
+				foreach (var item in request.Model?.Combos)
 				{
-					var combo = await _catalogModuleApi.GetComboByIdAsync(comboDto.ComboId);
-					if (combo == null)
+					ProductDto product = null;
+					ComboDto combo = null;
+                    try
 					{
-						return ResponseExceptionHelper.ErrorResponse<ComboDto>(ErrorCode.NotFound);
-					}
-					comboDto.ComboName = combo.Name;
-					comboDto.UnitPrice = combo.Price;
-					comboDto.TotalPrice = comboDto.UnitPrice * comboDto.Quantity;
-				}
+                        product = await _catalogModuleApi.GetProductByIdAsync(item.ComboId);
+                        combo = await _catalogModuleApi.GetComboByIdAsync(item.ComboId);
+                    }
+					catch (Exception)
+					{
+                        if (combo == null)
+                        {
+                            if (product == null)
+                                return ResponseExceptionHelper.ErrorResponse<ComboDto>(ErrorCode.NotFound);
+                        }
+                    }
+                    
+                    var line = new OrderProduct();
+					line.OrderId = order.Id;
+					line.ProductId = combo != null ? combo.Id : product.Id;
+					line.ProductName = combo != null ? combo.Name : product.Name;
+                    line.Price = combo != null ? combo.Price : product.Price;
+                    line.Quantity = item.Quantity;
 
-				// handle sunAmount
-				var subAmount = order.Combos.Count > 0 ? order.Combos.Sum(x => x.TotalPrice) : 0;
-				subAmount += order.Products.Count > 0 ? order.Products.Sum(x => x.TotalPrice) : 0;
-				subAmount += order.ShowSeats.Count > 0 ? order.ShowSeats.Sum(x => x.SeatTypePrice) : 0;
+					order.Amount += line.Price * line.Quantity;
+                }
 
-				order.Amount = subAmount;
-				order.SubAmount = subAmount;
-				order.OrderStatusId = OrderStatusConstants.Requested;
-				order.OrderStatus = await _orderRepository.GetStatusByIdAsync(OrderStatusConstants.Requested);
-				
-				var isOrderSusccessed = await _orderRepository.CreateAsync(order);
+				order.NetAmount = order.Amount;
+                var isOrderSusccessed = await _orderRepository.CreateAsync(order);
 				if (isOrderSusccessed)
 				{
 					await _unitOfWork.SaveChangesAsync();
-					SendOrderCreatedMessage(order);
 					return order.Id;
 				}
 				return ResponseExceptionHelper.ErrorResponse<Order>(ErrorCode.OperationFailed);
-
 			}
 			catch (Exception ex)
 			{

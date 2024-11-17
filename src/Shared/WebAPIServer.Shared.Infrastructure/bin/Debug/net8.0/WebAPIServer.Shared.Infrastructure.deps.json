@@ -311,7 +311,10 @@
           "Refit.HttpClientFactory": "7.2.1"
         },
         "runtime": {
-          "WebAPIServer.Shared.Abstractions.dll": {}
+          "WebAPIServer.Shared.Abstractions.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }
