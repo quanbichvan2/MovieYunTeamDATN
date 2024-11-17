@@ -24,6 +24,16 @@ namespace WebAPIServer.Modules.MovieManagement.Api.Controllers
             return Ok(response);
         }
 
+        [HttpGet("GetShowByMovieId/{id}")]
+        public async Task<IActionResult> GetShowByMovieId(Guid id)
+        {
+            var show = new GetShowByMovieIdQuery(id);
+            var response = await _mediator.Send(show);
+            return response.Match<IActionResult>(
+                _ => Ok(response.AsT0),
+                error => NotFound(response.AsT1));
+        }
+
         [HttpGet("{id}")]
         public async Task<IActionResult> GetShow(Guid id)
         {
@@ -34,7 +44,7 @@ namespace WebAPIServer.Modules.MovieManagement.Api.Controllers
                 error => NotFound(response.AsT1));
         }
 
-		//[Authorize(Roles = "ADMINISTRATOR")]
+        //[Authorize(Roles = "ADMINISTRATOR")]
         [HttpPost]
         public async Task<IActionResult> CreateShow([FromBody] ShowForCreateDto model)
         {

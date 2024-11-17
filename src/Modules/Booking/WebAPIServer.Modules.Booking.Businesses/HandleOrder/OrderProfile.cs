@@ -19,11 +19,11 @@ namespace WebAPIServer.Modules.Booking.Businesses.HandleOrder
 			//	.ForMember(src => src.Products, opt => opt.MapFrom(src => src.Products))
 			//	.ForMember(src => src.Combos, opt => opt.MapFrom(src => src.Combos));
 
-			CreateMap<OrderProduct, OrderComboForViewDto>()
-				.ForMember(src => src.Id, opt => opt.MapFrom(src => src.ProductId))
-				.ForMember(src => src.Name, opt => opt.MapFrom(src => src.ProductName));
+			CreateMap<OrderCombo, OrderComboForViewDto>()
+				.ForMember(src => src.Id, opt => opt.MapFrom(src => src.ComboId))
+				.ForMember(src => src.Name, opt => opt.MapFrom(src => src.ComboName));
 
-			//CreateMap<OrderProduct, OrderProductForViewDto>()
+			//CreateMap<OrderCombo, OrderComboForViewDto>()
 			//	.ForMember(src => src.Id, opt => opt.MapFrom(src => src.ProductId))
 			//	.ForMember(src => src.Name, opt => opt.MapFrom(src => src.ProductName));
 
@@ -35,14 +35,14 @@ namespace WebAPIServer.Modules.Booking.Businesses.HandleOrder
 			//	.ForMember(src => src.ShowSeats, opt => opt.MapFrom(src => src.ShowSeats))
 			//	.ForMember(src => src.Products, opt => opt.MapFrom(src => src.Products))
 			//	.ForMember(src => src.Combos, opt => opt.MapFrom(src => src.Combos));
-			//CreateMap<OrderProductForCreateDto, OrderProduct>();
-			CreateMap<OrderComboForCreateDto, OrderProduct>();
+			//CreateMap<OrderComboForCreateDto, OrderCombo>();
+			CreateMap<OrderComboForCreateDto, OrderCombo>();
 /*			CreateMap<OrderTicketTypeForCreateDto, OrderTicketType>()
 				.ForMember(dest => dest.TicketTypeId, opt => opt.MapFrom(src => src.TicketTypeId));*/
 			//CreateMap<OrderShowSeatForCreateDto, OrderShowSeat>();
 
-			// Mapping details for each individual OrderProduct item
-			//CreateMap<OrderProductForCreateDto, OrderProduct>()
+			// Mapping details for each individual OrderCombo item
+			//CreateMap<OrderComboForCreateDto, OrderCombo>()
 			//	.ForMember(dest => dest.ProductId, opt => opt.MapFrom(src => src.ProductId))
 			//	.ForMember(dest => dest.Quantity, opt => opt.MapFrom(src => src.Quantity));
 			CreateMap<OrderForUpdateDto, Order>();

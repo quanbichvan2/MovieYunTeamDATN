@@ -54,6 +54,9 @@ namespace WebAPIServer.Modules.Booking.Domain.Entities
         [ForeignKey("OrderStatus")]
         public Guid StatusId { get; set; }
         public OrderStatus Status { get; set; }
+
+        //public ICollection<OrderMovie> OrderMovies { get; set; } = new List<OrderMovie>();
+        //public ICollection<OrderProduct> OrderProducts { get; set; } = new List<OrderProduct>();
     }
 
   //  public class OrderLine : BaseEntity
@@ -75,7 +78,7 @@ namespace WebAPIServer.Modules.Booking.Domain.Entities
         public double Price { get; set; }
         public Guid SeatId { get; set; }
         public string SeatName { get; set; } = string.Empty;
-        //public int? Quantity { get; set; }
+        public int Quantity { get; set; }
         public Guid TypeId { get; set; }
         public string TypeName { get; set; } = string.Empty;
         public Guid HallId { get; set; }
@@ -86,13 +89,13 @@ namespace WebAPIServer.Modules.Booking.Domain.Entities
         public string? MovieTitle { get; set; } = string.Empty;
     }
 
-    public class OrderProduct : BaseEntity
+    public class OrderCombo : BaseEntity
     {
         public Guid OrderId { get; set; }
         public double Price { get; set; }
-        public Guid ProductId { get; set; }
-        public string ProductName { get; set; }
-        //public string ProductTypeName { get; set; }
+        public Guid ComboId { get; set; }
+        public string ComboName { get; set; }
+        public string ComboTypeName { get; set; }
         public int Quantity { get; set; }
     }
 }

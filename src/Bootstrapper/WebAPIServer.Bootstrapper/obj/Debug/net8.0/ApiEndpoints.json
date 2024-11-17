@@ -1114,6 +1114,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "WebAPIServer.Modules.MovieManagement.Api.Controllers.ShowsController",
+    "Method": "GetShowByMovieId",
+    "RelativePath": "movie-management-module/Shows/GetShowByMovieId/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "WebAPIServer.Modules.Payment.Api.Controllers.HomeController",
     "Method": "Get",
     "RelativePath": "payment-module",

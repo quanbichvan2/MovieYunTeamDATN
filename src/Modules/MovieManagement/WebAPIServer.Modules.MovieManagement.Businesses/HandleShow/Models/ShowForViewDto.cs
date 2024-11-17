@@ -1,4 +1,6 @@
-﻿using WebAPIServer.Modules.MovieManagement.Businesses.HandleShow.Models.Base;
+﻿using System.ComponentModel.DataAnnotations.Schema;
+using WebAPIServer.Modules.MovieManagement.Businesses.HandleShow.Models.Base;
+using WebAPIServer.Modules.MovieManagement.Domain.Entities;
 using WebAPIServer.Modules.MovieManagement.Domain.Enums;
 
 namespace WebAPIServer.Modules.MovieManagement.Businesses.HandleShow.Models
@@ -15,7 +17,20 @@ namespace WebAPIServer.Modules.MovieManagement.Businesses.HandleShow.Models
 		
     }
 
-	public class ListHall
+    public class ShowForViewApiDto
+    {
+        public Guid Id { get; set; }
+        public DateTimeOffset StartTime { get; set; }
+        public Guid CinemaHallId { get; set; }
+        public string HallName { get; set; } = default!;
+        //public string CinemaName { get; set; } = default!;
+        public Guid MovieId { get; set; }
+        public string MovieTitle { get; set; } = default!;
+        public byte MovieRuntimeMinutes { get; set; }
+        public DateTimeOffset EndTime { get; set; }
+    }
+
+    public class ListHall
 	{
 		public Guid HallId { get; set; }
 		public string HallName { get; set; } = default!;

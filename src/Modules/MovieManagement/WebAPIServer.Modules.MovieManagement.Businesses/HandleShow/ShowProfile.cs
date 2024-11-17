@@ -14,6 +14,7 @@ namespace WebAPIServer.Modules.MovieManagement.Businesses.HandleShow
                 //.ForMember(dest => dest.StartTime, opt => opt.MapFrom(src => src.StartTime.ToUniversalTime()));
                 //.ForMember(dest => dest.EndTime, opt => opt.MapFrom(src => src.EndTime.ToUniversalTime()));
             CreateMap<Show, ShowForViewDto>();
+            CreateMap<Show, ShowForViewApiDto>();
             CreateMap<Show, ShowTimeDto>();
         }
     }

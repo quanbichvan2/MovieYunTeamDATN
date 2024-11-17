@@ -5,5 +5,5 @@ using WebAPIServer.Shared.Abstractions.Exceptions;
 
 namespace WebAPIServer.Modules.MovieManagement.Businesses.HandleShow.Queries
 {
-    public record GetShowByIdQuery(Guid Id): IRequest<OneOf<ShowForViewDto, ResponseException>>;
+    public record GetShowByIdQuery(Guid Id) : IRequest<OneOf<ShowForViewApiDto, ResponseException>>;
 }

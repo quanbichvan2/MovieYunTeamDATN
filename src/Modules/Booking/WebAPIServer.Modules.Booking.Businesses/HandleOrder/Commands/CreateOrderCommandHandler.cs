@@ -20,31 +20,37 @@ namespace WebAPIServer.Modules.Booking.Businesses.HandleOrder.Commands
 	{
 		private readonly ILogger<CreateOrderCommandHandler> _logger;
 		private readonly IOrderRepository _orderRepository;
-		private readonly IUnitOfWork _unitOfWork;
+		private readonly IOrderComboRepository _orderProductRepository;
+		private readonly IOrderMovieRepository _orderMovieRepository;
+        private readonly IUnitOfWork _unitOfWork;
 		private readonly IValidator<OrderForCreateDto> _validator;
 		private readonly IMapper _mapper;
 		private readonly ICatalogModuleApi _catalogModuleApi;
 		private readonly IMovieManagementModuleApi _movieManagementModuleApi;
 		private readonly ITicketsModuleApi _ticketsModuleApi;
-		public CreateOrderCommandHandler(ILogger<CreateOrderCommandHandler> logger,
-			IOrderRepository orderRepository,
-			IUnitOfWork unitOfWork,
-			IValidator<OrderForCreateDto> validator,
-			IMapper mapper,
-			ICatalogModuleApi productApi,
-			IMovieManagementModuleApi movieManagementModuleApi,
-			ITicketsModuleApi ticketsModuleApi)
-		{
-			_logger = logger;
-			_orderRepository = orderRepository;
-			_unitOfWork = unitOfWork;
-			_validator = validator;
-			_mapper = mapper;
-			_catalogModuleApi = productApi;
-			_movieManagementModuleApi = movieManagementModuleApi;
-			_ticketsModuleApi = ticketsModuleApi;
-		}
-		public async Task<OneOf<Guid, ResponseException>> Handle(CreateOrderCommand request, CancellationToken cancellationToken)
+        public CreateOrderCommandHandler(ILogger<CreateOrderCommandHandler> logger,
+            IOrderRepository orderRepository,
+            IUnitOfWork unitOfWork,
+            IValidator<OrderForCreateDto> validator,
+            IMapper mapper,
+            ICatalogModuleApi productApi,
+            IMovieManagementModuleApi movieManagementModuleApi,
+            ITicketsModuleApi ticketsModuleApi,
+            IOrderComboRepository orderProductRepository,
+            IOrderMovieRepository orderMovieRepository)
+        {
+            _logger = logger;
+            _orderRepository = orderRepository;
+            _unitOfWork = unitOfWork;
+            _validator = validator;
+            _mapper = mapper;
+            _catalogModuleApi = productApi;
+            _movieManagementModuleApi = movieManagementModuleApi;
+            _ticketsModuleApi = ticketsModuleApi;
+            _orderProductRepository = orderProductRepository;
+            _orderMovieRepository = orderMovieRepository;
+        }
+        public async Task<OneOf<Guid, ResponseException>> Handle(CreateOrderCommand request, CancellationToken cancellationToken)
 		{
 			try
 			{
@@ -79,7 +85,7 @@ namespace WebAPIServer.Modules.Booking.Businesses.HandleOrder.Commands
 						return ResponseExceptionHelper.ErrorResponse<TicketTypeDto>(ErrorCode.NotFound);
 					}
 
-					var hall = await _movieManagementModuleApi.GetHallByIdAsync(show.Id);
+					var hall = await _movieManagementModuleApi.GetHallByIdAsync(show.CinemaHallId);
 					if (hall == null)
 					{
 						return ResponseExceptionHelper.ErrorResponse<HallDto>(ErrorCode.NotFound);
@@ -97,13 +103,16 @@ namespace WebAPIServer.Modules.Booking.Businesses.HandleOrder.Commands
 					line.TypeName = ticketType.Name;
 					line.HallId = show.CinemaHallId;
 					line.HallName = show.HallName;
-					line.ShowEndAt = show.EndTime;
+					line.Quantity = (int)(request.Model?.Line.Count());
+                    line.ShowEndAt = show.EndTime;
 					line.ShowStartAt = show.StartTime;
 					line.ShowStartEndTime = $"{show.StartTime} - {show.EndTime}";
 					line.MovieTitle = show.MovieTitle;
 
 					order.Amount += line.Price;
-				}
+                    
+                    await _orderMovieRepository.CreateAsync(line);
+                }
 
 				foreach (var item in request.Model?.Combos)
 				{
@@ -122,20 +131,22 @@ namespace WebAPIServer.Modules.Booking.Businesses.HandleOrder.Commands
                                 return ResponseExceptionHelper.ErrorResponse<ComboDto>(ErrorCode.NotFound);
                         }
                     }
-                    
-                    var line = new OrderProduct();
+
+                    var line = new OrderCombo();
 					line.OrderId = order.Id;
-					line.ProductId = combo != null ? combo.Id : product.Id;
-					line.ProductName = combo != null ? combo.Name : product.Name;
+					line.ComboId = combo != null ? combo.Id : product.Id;
+					line.ComboName = combo != null ? combo.Name : product.Name;
+					line.ComboTypeName = string.Empty;
                     line.Price = combo != null ? combo.Price : product.Price;
                     line.Quantity = item.Quantity;
 
 					order.Amount += line.Price * line.Quantity;
+                    await _orderProductRepository.CreateAsync(line);
                 }
 
 				order.NetAmount = order.Amount;
                 var isOrderSusccessed = await _orderRepository.CreateAsync(order);
-				if (isOrderSusccessed)
+                if (isOrderSusccessed)
 				{
 					await _unitOfWork.SaveChangesAsync();
 					return order.Id;

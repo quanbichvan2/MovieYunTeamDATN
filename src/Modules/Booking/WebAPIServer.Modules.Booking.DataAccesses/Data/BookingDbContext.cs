@@ -9,7 +9,7 @@ namespace WebAPIServer.Modules.Booking.DataAccesses.Data
 
 		public virtual DbSet<Order> Orders { get; set; }
 		public virtual DbSet<OrderStatus> OrderStatuses { get; set; }
-		public virtual DbSet<OrderProduct> OrderProducts { get; set; }
+		public virtual DbSet<OrderCombo> OrderCombos { get; set; }
 		public virtual DbSet<OrderMovie> OrderMovies { get; set; }
 
 		protected override void OnModelCreating(ModelBuilder modelBuilder)

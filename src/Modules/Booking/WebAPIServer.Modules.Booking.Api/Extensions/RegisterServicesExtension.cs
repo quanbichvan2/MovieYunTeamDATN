@@ -20,6 +20,8 @@ namespace WebAPIServer.Modules.Booking.Api.Extentions
             services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(ApplicationAssemblyMarker).GetTypeInfo().Assembly));
 
             services.AddScoped<IOrderRepository, OrderRepository>();
+            services.AddScoped<IOrderMovieRepository, OrderMovieRepository>();
+            services.AddScoped<IOrderComboRepository, OrderComboRepository>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
 
             services.AddScoped<IValidator<OrderForCreateDto>, OrderForCreateDtoValidation>();
