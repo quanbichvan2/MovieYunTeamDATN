@@ -41,7 +41,7 @@ namespace WebAPIServer.Modules.MovieManagement.Businesses.HandleShow.Models
     {
         public string StartTime { get; set; }
         
-        public List<string> ShowTimes { get; set; } = new List<string>();
+        public List<ShowTime> ShowTimes { get; set; } = new List<ShowTime>();
     }
 
 	public class GenreMovieDto
@@ -49,8 +49,9 @@ namespace WebAPIServer.Modules.MovieManagement.Businesses.HandleShow.Models
         public Guid Id { get; set; }
         public string Name { get; set; }
     }
-	public class ShowTimeDto
+	public class ShowTime
 	{
+        public Guid ShowId { get; set; }
         public string Time { get; set; }
 	}
 	//public class ShowSeatForViewDto

@@ -89,7 +89,11 @@ namespace WebAPIServer.Modules.MovieManagement.Businesses.HandleShow.Queries
                                     listTime.StartTime = item2.StartTime.Day + "-" + item2.StartTime.Month + "-" + item2.StartTime.Year;
                                     var hour = item2.StartTime.Hour.ToString().Length == 2 ? item2.StartTime.Hour.ToString() : ("0" + item2.StartTime.Hour.ToString());
                                     var minute = item2.StartTime.Minute.ToString().Length == 2 ? item2.StartTime.Minute.ToString() : ("0" + item2.StartTime.Minute.ToString());
-                                    listTime.ShowTimes.Add(hour + ":" + minute);
+
+                                    ShowTime showTimeDto = new ShowTime();
+                                    showTimeDto.Time = hour + ":" + minute;
+                                    showTimeDto.ShowId = item2.Id;
+                                    listTime.ShowTimes.Add(showTimeDto);
 
 
                                 }

@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WebAPIServer.Bootstrapper")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+19858c907ef451f2d39e8746bca8da8c7ec72d8a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+064011f689fca4aebe16607d8fe13fb888db9381")]
 [assembly: System.Reflection.AssemblyProductAttribute("WebAPIServer.Bootstrapper")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WebAPIServer.Bootstrapper")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -3,6 +3,7 @@ using FluentValidation;
 using MediatR;
 using Microsoft.Extensions.Logging;
 using OneOf;
+using System.Linq;
 using WebAPIServer.Modules.MovieManagement.Businesses.Contracts.Repositories;
 using WebAPIServer.Modules.MovieManagement.Businesses.HandleShow.Models;
 using WebAPIServer.Modules.MovieManagement.Domain.Entities;
@@ -41,60 +42,47 @@ namespace WebAPIServer.Modules.MovieManagement.Businesses.HandleShow.Commands
 		{
 			try
 			{
-    //            var validationResult = await _validator.ValidateAsync(request.Model);
-    //            if (!validationResult.IsValid)
-    //            {
-    //                return ResponseExceptionHelper.ErrorResponse<Movie>(ErrorCode.CreateError, validationResult.Errors);
-    //            }
-    //            var showDto = request.Model;
-    //            var show = await _showRepository.FindByIdAsync(request.Id);
-    //            if (show == null)
-    //            {
-    //                return ResponseExceptionHelper.ErrorResponse<Show>(ErrorCode.NotFound);
-    //            }
+				var validationResult = await _validator.ValidateAsync(request.Model);
+				if (!validationResult.IsValid)
+				{
+					return ResponseExceptionHelper.ErrorResponse<Movie>(ErrorCode.CreateError, validationResult.Errors);
+				}
+				var showDto = request.Model;
+				var show = await _showRepository.GetByIdAsync(request.Id);
+				if (show == null)
+				{
+					return ResponseExceptionHelper.ErrorResponse<Show>(ErrorCode.NotFound);
+				}
 
-    //            var movie = await _movieRepository.FindByIdAsync(showDto.MovieId);
-    //            if (movie == null)
-    //            {
-    //                return ResponseExceptionHelper.ErrorResponse<Movie>(ErrorCode.NotFound);
-    //            }
-    //            var timeDto = DateTime.SpecifyKind(showDto.StartTime.DateTime, DateTimeKind.Utc);
+				var movie = await _movieRepository.FindByIdAsync(showDto.MovieId);
+				if (movie == null)
+				{
+					return ResponseExceptionHelper.ErrorResponse<Movie>(ErrorCode.NotFound);
+				}
 
-    //            var timeDuration = DateTime.SpecifyKind(showDto.StartTime.DateTime, DateTimeKind.Utc).AddMinutes(movie.RuntimeMinutes + 15);
-    //            var checkTime = _showRepository.GetAll().Any(x => x.CinemaHallId == showDto.CinemaHallId
-    //                && (timeDto <= x.StartTime && timeDuration >= x.StartTime)
-    //                || (timeDto >= x.StartTime && timeDto <= x.StartTime.AddMinutes(movie.RuntimeMinutes + 15)));
-    //            if (checkTime)
-    //            {
-    //                return ResponseExceptionHelper.ErrorResponse<Show>(ErrorCode.Duplicated);
-    //            }
+                //var hall = await _hallRepository.FindByIdAsync(showDto);
+                //if (hall == null)
+                //{
+                //	return ResponseExceptionHelper.ErrorResponse<Hall>(ErrorCode.NotFound);
+                //}
 
-    //            var show = _mapper.Map<Show>(showDto);
-    //            show.StartTime = DateTime.SpecifyKind(showDto.StartTime.DateTime, DateTimeKind.Utc);
-    //            await _showRepository.CreateAsync(show);
-    //            await _unitOfWork.SaveChangesAsync();
-                
+                var timeDto = DateTime.SpecifyKind(showDto.StartTime.DateTime, DateTimeKind.Utc);
 
-				
-				////var hall = await _hallRepository.FindByIdAsync(showDto);
-				////if (hall == null)
-				////{
-				////	return ResponseExceptionHelper.ErrorResponse<Hall>(ErrorCode.NotFound);
-				////}
-				//var movie = await _movieRepository.FindByIdAsync(showDto.MovieId);
-				//if (movie == null)
-				//{
-				//	return ResponseExceptionHelper.ErrorResponse<Movie>(ErrorCode.NotFound);
-				//}
-				////show.HallName = hall.Name;
-				////show.MoviePosterImage = movie.PosterImage;
-				////show.MovieRuntimeMinutes = movie.RuntimeMinutes;
-				////show.MovieTitle = movie.Title;
+				var timeDuration = DateTime.SpecifyKind(showDto.StartTime.DateTime, DateTimeKind.Utc).AddMinutes(movie.RuntimeMinutes + 15);
+				var checkTime = _showRepository.GetAll().Where(x => x.Id != show.Id).Any(x => x.CinemaHallId == showDto.CinemaHallId
+					&& (timeDto <= x.StartTime && timeDuration >= x.StartTime)
+					|| (timeDto >= x.StartTime && timeDto <= x.StartTime.AddMinutes(movie.RuntimeMinutes + 15)));
+				if (checkTime)
+				{
+					return ResponseExceptionHelper.ErrorResponse<Show>(ErrorCode.Duplicated);
+				}
 
-				//_mapper.Map(showDto, show);
-				//_showRepository.Update(show);
-				//await _unitOfWork.SaveChangesAsync();
-				return true;
+				show.StartTime = DateTime.SpecifyKind(showDto.StartTime.DateTime, DateTimeKind.Utc);
+                show.CinemaHallId = showDto.CinemaHallId;
+				show.MovieId = showDto.MovieId;
+                _showRepository.Update(show);
+                await _unitOfWork.SaveChangesAsync();
+                return true;
 			}
 			catch (Exception ex)
 			{
