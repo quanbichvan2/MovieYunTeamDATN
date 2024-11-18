@@ -440,6 +440,22 @@
   },
   {
     "ContainingType": "WebAPIServer.Modules.Identity.Api.Controllers.IdentityController",
+    "Method": "ConfirmOTP",
+    "RelativePath": "identity-module/Identity/confirm-otp",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "otp",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebAPIServer.Modules.Identity.Api.Controllers.IdentityController",
     "Method": "Login",
     "RelativePath": "identity-module/Identity/login",
     "HttpMethod": "POST",
@@ -478,6 +494,16 @@
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebAPIServer.Modules.Identity.Api.Controllers.IdentityController",
+    "Method": "ResetPassword",
+    "RelativePath": "identity-module/Identity/reset-password",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {

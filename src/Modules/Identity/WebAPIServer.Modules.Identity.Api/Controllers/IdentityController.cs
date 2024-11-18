@@ -1,5 +1,7 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using MediatR;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Caching.Memory;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using WebAPIServer.Modules.Identity.Businesses.Contracts.Services;
@@ -11,13 +13,16 @@ namespace WebAPIServer.Modules.Identity.Api.Controllers
 	{
 		private readonly IAuthenticationService _authenticationService;
 		private readonly ITokenService _tokenService;
-		public IdentityController(IAuthenticationService authenticationService,
-			ITokenService tokenService)
-		{
-			_authenticationService = authenticationService;
-			_tokenService = tokenService;
-		}
-		[HttpPost("login")]
+        private IMemoryCache _cache;
+        public IdentityController(IAuthenticationService authenticationService,
+            ITokenService tokenService,
+            IMemoryCache cache)
+        {
+            _authenticationService = authenticationService;
+            _tokenService = tokenService;
+            _cache = cache;
+        }
+        [HttpPost("login")]
 		public async Task<IActionResult> Login([FromBody] LoginDto model)
 		{
 			var response = await _authenticationService.Login(model);
@@ -39,7 +44,29 @@ namespace WebAPIServer.Modules.Identity.Api.Controllers
 				error => BadRequest(response.AsT1));
 		}
 
-		[HttpPost("refresh-token")]
+        [HttpPost("reset-password")]
+        public async Task<IActionResult> ResetPassword()
+        {
+            string emailClaim = User.Claims.First(c => c.Type == ClaimTypes.Email)?.Value;
+            var response = await _authenticationService.ResetPassword(emailClaim);
+            return response.Match<IActionResult>(
+                _ => Ok(response.AsT0),
+                error => BadRequest(response.AsT1));
+        }
+
+        [HttpPost("confirm-otp")]
+        public async Task<IActionResult> ConfirmOTP(string otp)
+        {
+            string emailClaim = User.Claims.First(c => c.Type == ClaimTypes.Email)?.Value;
+            var cacheKey = new { email = emailClaim, otp = otp };
+            if (_cache.TryGetValue(cacheKey, out _))
+            {
+                return Ok(true);
+            }
+            return Ok(false);
+        }
+
+        [HttpPost("refresh-token")]
 		public async Task<IActionResult> RefreshToken()
 		{
 			if (Request.Cookies.TryGetValue("refresh_token", out var refreshToken))

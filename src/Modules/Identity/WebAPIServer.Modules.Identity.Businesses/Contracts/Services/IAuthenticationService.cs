@@ -8,7 +8,8 @@ namespace WebAPIServer.Modules.Identity.Businesses.Contracts.Services
 	public interface IAuthenticationService
 	{
 		Task<OneOf<bool, ResponseException>> Register(RegisterDto modelDto, CancellationToken cancellationToken);
-		Task<OneOf<ResponseJwtHelper, ResponseException>> Login(LoginDto modelDto);
+		Task<OneOf<bool, ResponseException>> ResetPassword(string emailClaim);
+        Task<OneOf<ResponseJwtHelper, ResponseException>> Login(LoginDto modelDto);
 		Task<UserIdentity> ValidateRefreshToken(string refreshToken);
 	}
 }
