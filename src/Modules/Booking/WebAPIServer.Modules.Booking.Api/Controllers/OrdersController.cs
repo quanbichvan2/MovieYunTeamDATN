@@ -54,7 +54,7 @@ namespace WebAPIServer.Modules.Booking.Api.Controllers
 
 		//[Authorize]
 		[HttpPost]
-		public async Task<IActionResult> CreateOrder([FromBody] OrderForCreateDto model)
+        public async Task<IActionResult> CreateOrder([FromBody] OrderForCreateDto model)
 		{
 			var order = new CreateOrderCommand(model);
 			var response = await _mediator.Send(order);
@@ -62,5 +62,13 @@ namespace WebAPIServer.Modules.Booking.Api.Controllers
 				_ => Ok(response.AsT0),
 				error => BadRequest(response.AsT1));
 		}
+
+        [HttpPost("CheckStatusSeat")]
+        public async Task<IActionResult> CheckStatusSeat([FromBody] CheckStatusSeatDto model)
+        {
+            var order = new CheckStatusSeatCommand(model);
+            var response = await _mediator.Send(order);
+			return Ok(response);
+        }
     }
 }

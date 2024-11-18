@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using FluentValidation;
 using MediatR;
+using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using OneOf;
@@ -27,7 +28,9 @@ namespace WebAPIServer.Modules.Booking.Businesses.HandleOrder.Commands
 		private readonly IMapper _mapper;
 		private readonly ICatalogModuleApi _catalogModuleApi;
 		private readonly IMovieManagementModuleApi _movieManagementModuleApi;
-		private readonly ITicketsModuleApi _ticketsModuleApi;
+		private readonly IVoucherModuleApi _voucherModuleApi;
+        private readonly ITicketsModuleApi _ticketsModuleApi;
+        private IMemoryCache _cache;
         public CreateOrderCommandHandler(ILogger<CreateOrderCommandHandler> logger,
             IOrderRepository orderRepository,
             IUnitOfWork unitOfWork,
@@ -37,7 +40,9 @@ namespace WebAPIServer.Modules.Booking.Businesses.HandleOrder.Commands
             IMovieManagementModuleApi movieManagementModuleApi,
             ITicketsModuleApi ticketsModuleApi,
             IOrderComboRepository orderProductRepository,
-            IOrderMovieRepository orderMovieRepository)
+            IOrderMovieRepository orderMovieRepository,
+            IMemoryCache cache,
+            IVoucherModuleApi voucherModuleApi)
         {
             _logger = logger;
             _orderRepository = orderRepository;
@@ -49,6 +54,8 @@ namespace WebAPIServer.Modules.Booking.Businesses.HandleOrder.Commands
             _ticketsModuleApi = ticketsModuleApi;
             _orderProductRepository = orderProductRepository;
             _orderMovieRepository = orderMovieRepository;
+            _cache = cache;
+            _voucherModuleApi = voucherModuleApi;
         }
         public async Task<OneOf<Guid, ResponseException>> Handle(CreateOrderCommand request, CancellationToken cancellationToken)
 		{
@@ -60,13 +67,11 @@ namespace WebAPIServer.Modules.Booking.Businesses.HandleOrder.Commands
 					return ResponseExceptionHelper.ErrorResponse<Order>(ErrorCode.CreateError, validationResult.Errors);
 				}
 
-                //update on redis
-
+				double discount = 0;
                 var order = new Order();
                 order.CreatedAt = DateTime.UtcNow;
                 //public Guid? UserId { get; set; }
                 //public string? UserName { get; set; }
-                //public Guid? VoucherId { get; set; }
                 order.PaymentId = request.Model.PaymentId;
                 order.StatusId = OrderStatusConstants.Confirmed;
 
@@ -90,7 +95,12 @@ namespace WebAPIServer.Modules.Booking.Businesses.HandleOrder.Commands
 					{
 						return ResponseExceptionHelper.ErrorResponse<HallDto>(ErrorCode.NotFound);
 					}
-					var seat = hall.Seats.Where(x => x.Id == item.SeatId).FirstOrDefault();
+
+                    if (hall == null)
+                    {
+                        return ResponseExceptionHelper.ErrorResponse<HallDto>(ErrorCode.NotFound);
+                    }
+                    var seat = hall.Seats.Where(x => x.Id == item.SeatId).FirstOrDefault();
 
 
 					var line = new OrderMovie();
@@ -109,9 +119,29 @@ namespace WebAPIServer.Modules.Booking.Businesses.HandleOrder.Commands
 					line.ShowStartEndTime = $"{show.StartTime} - {show.EndTime}";
 					line.MovieTitle = show.MovieTitle;
 
-					order.Amount += line.Price;
+                    if (request.Model.VoucherId != null)
+                    {
+						var voucher = await _voucherModuleApi.GetVoucherByIdAsync(request.Model.VoucherId.Value);
+                        if (hall == null)
+                        {
+                            return ResponseExceptionHelper.ErrorResponse<VoucherDto>(ErrorCode.NotFound);
+                        }
+                        discount = voucher.DiscountValue;
+                    }
+                    order.Amount += line.Price;
                     
                     await _orderMovieRepository.CreateAsync(line);
+
+                    //update cache
+                    var cacheKey = new { Time = show.StartTime, HallId = show.CinemaHallId, SeatName = seat.SeatPosition };
+                    if (_cache.TryGetValue(cacheKey, out var currentValue))
+                    {
+                        _cache.Set(cacheKey, currentValue, TimeSpan.FromMinutes(show.MovieRuntimeMinutes + 15));
+					}
+					else
+					{
+                        throw new InvalidOperationException("Co lỗi xảy ra trong qua trình giao dịch!");
+                    }
                 }
 
 				foreach (var item in request.Model?.Combos)
@@ -144,7 +174,7 @@ namespace WebAPIServer.Modules.Booking.Businesses.HandleOrder.Commands
                     await _orderProductRepository.CreateAsync(line);
                 }
 
-				order.NetAmount = order.Amount;
+				order.NetAmount = order.Amount - discount;
                 var isOrderSusccessed = await _orderRepository.CreateAsync(order);
                 if (isOrderSusccessed)
 				{

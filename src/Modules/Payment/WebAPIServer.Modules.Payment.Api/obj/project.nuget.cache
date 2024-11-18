@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "InQtc/yfpDk=",
+  "dgSpecHash": "KMkHt6ExiHY=",
   "success": true,
   "projectFilePath": "D:\\MovieYunTeamDATN\\src\\Modules\\Payment\\WebAPIServer.Modules.Payment.Api\\WebAPIServer.Modules.Payment.Api.csproj",
   "expectedPackageFiles": [
@@ -40,8 +40,12 @@
     "C:\\Users\\ASUS\\.nuget\\packages\\rabbitmq.client\\6.8.1\\rabbitmq.client.6.8.1.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\refit\\7.2.1\\refit.7.2.1.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\refit.httpclientfactory\\7.2.1\\refit.httpclientfactory.7.2.1.nupkg.sha512",
+    "C:\\Users\\ASUS\\.nuget\\packages\\stripe.net\\47.0.0\\stripe.net.47.0.0.nupkg.sha512",
+    "C:\\Users\\ASUS\\.nuget\\packages\\system.configuration.configurationmanager\\8.0.0\\system.configuration.configurationmanager.8.0.0.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\system.diagnostics.diagnosticsource\\8.0.0\\system.diagnostics.diagnosticsource.8.0.0.nupkg.sha512",
+    "C:\\Users\\ASUS\\.nuget\\packages\\system.diagnostics.eventlog\\8.0.0\\system.diagnostics.eventlog.8.0.0.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\system.memory\\4.5.5\\system.memory.4.5.5.nupkg.sha512",
+    "C:\\Users\\ASUS\\.nuget\\packages\\system.security.cryptography.protecteddata\\8.0.0\\system.security.cryptography.protecteddata.8.0.0.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\system.text.encodings.web\\4.5.0\\system.text.encodings.web.4.5.0.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\system.threading.channels\\7.0.0\\system.threading.channels.7.0.0.nupkg.sha512"
   ],

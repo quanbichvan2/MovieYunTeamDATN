@@ -50,31 +50,27 @@ namespace WebAPIServer.Modules.MovieManagement.Businesses.HandleShow.Commands
                     return ResponseExceptionHelper.ErrorResponse<Movie>(ErrorCode.CreateError, validationResult.Errors);
                 }
                 var showDto = request.Model;
-                //var hall = await _hallRepository.FindByIdAsync(showDto.);
-                //if (hall == null)
-                //{
-                //    return ResponseExceptionHelper.ErrorResponse<Hall>(ErrorCode.NotFound);
-                //}
                 var movie = await _movieRepository.FindByIdAsync(showDto.MovieId);
                 if (movie == null)
                 {
                     return ResponseExceptionHelper.ErrorResponse<Movie>(ErrorCode.NotFound);
                 }
+                var timeDto = DateTime.SpecifyKind(showDto.StartTime.DateTime, DateTimeKind.Utc);
 
-                var timeDuration = DateTime.SpecifyKind(showDto.StartTime.DateTime, DateTimeKind.Utc).AddMinutes(movie.RuntimeMinutes + 15); //.DateTime.Ticks.AddMinutes(movie.RuntimeMinutes + 15);
+                var timeDuration = DateTime.SpecifyKind(showDto.StartTime.DateTime, DateTimeKind.Utc).AddMinutes(movie.RuntimeMinutes + 15);
                 var checkTime = _showRepository.GetAll().Any(x => x.CinemaHallId == showDto.CinemaHallId
-                    && x.StartTime <= DateTime.SpecifyKind(showDto.StartTime.DateTime, DateTimeKind.Utc)
-                    && x.StartTime >= timeDuration);
+                    && (timeDto <= x.StartTime && timeDuration >= x.StartTime)
+                    || (timeDto >= x.StartTime && timeDto <= x.StartTime.AddMinutes(movie.RuntimeMinutes + 15)));
                 if (checkTime)
                 {
-                    return ResponseExceptionHelper.ErrorResponse<Show>(ErrorCode.ValidationError);
+                    return ResponseExceptionHelper.ErrorResponse<Show>(ErrorCode.Duplicated);
                 }
 
                 var show = _mapper.Map<Show>(showDto);
                 show.StartTime = DateTime.SpecifyKind(showDto.StartTime.DateTime, DateTimeKind.Utc);
                 await _showRepository.CreateAsync(show);
                 await _unitOfWork.SaveChangesAsync();
-                return Guid.NewGuid();
+                return show.Id;
             }
             catch (Exception ex)
             {

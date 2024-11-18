@@ -396,3 +396,6 @@ D:\MovieYunTeamDATN\src\Bootstrapper\WebAPIServer.Bootstrapper\obj\Debug\net8.0\
 D:\MovieYunTeamDATN\src\Bootstrapper\WebAPIServer.Bootstrapper\obj\Debug\net8.0\WebAPIServer.Bootstrapper.pdb
 D:\MovieYunTeamDATN\src\Bootstrapper\WebAPIServer.Bootstrapper\obj\Debug\net8.0\WebAPIServer.Bootstrapper.genruntimeconfig.cache
 D:\MovieYunTeamDATN\src\Bootstrapper\WebAPIServer.Bootstrapper\obj\Debug\net8.0\ref\WebAPIServer.Bootstrapper.dll
+D:\MovieYunTeamDATN\src\Bootstrapper\WebAPIServer.Bootstrapper\bin\Debug\net8.0\Stripe.net.dll
+D:\MovieYunTeamDATN\src\Bootstrapper\WebAPIServer.Bootstrapper\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+D:\MovieYunTeamDATN\src\Bootstrapper\WebAPIServer.Bootstrapper\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll

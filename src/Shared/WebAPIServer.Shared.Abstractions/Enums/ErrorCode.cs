@@ -10,6 +10,11 @@ namespace WebAPIServer.Shared.Abstractions.Enums
         [Description("Có vấn đề khi thực hiện {0}")]
         ValidationError,
         /// <summary>
+        /// Có vấn đề khi thực hiện { tên entity }
+        /// </summary>
+        [Description("Dữ liệu đã bị trùng lặp {0}")]
+        Duplicated,
+        /// <summary>
         /// Đã xảy ra lỗi khi tạo { tên entity }
         /// </summary>
         [Description("Đã xảy ra lỗi khi tạo {0}")]

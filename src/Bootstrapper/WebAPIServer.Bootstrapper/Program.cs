@@ -1,5 +1,7 @@
+using Microsoft.Extensions.Configuration;
 using Microsoft.OpenApi.Models;
 using WebAPIServer.Bootstrapper.Extensions;
+using WebAPIServer.Bootstrapper.Security;
 using WebAPIServer.Modules.Booking.Api;
 using WebAPIServer.Modules.Catalog.Api;
 using WebAPIServer.Modules.Identity.Api;
@@ -16,9 +18,11 @@ builder.Services.AddCatalogModule();
 builder.Services.AddMovieManagementModule();
 builder.Services.AddTicketsModule();
 builder.Services.AddBookingModule();
-builder.Services.AddPaymentModule();
+builder.Services.AddPaymentModule(builder.Configuration);
 builder.Services.AddUsersModule();
 builder.Services.AddVoucherModule();
+
+builder.Services.AddMemoryCache();
 
 // Default
 builder.Services.AddIdentityModule();

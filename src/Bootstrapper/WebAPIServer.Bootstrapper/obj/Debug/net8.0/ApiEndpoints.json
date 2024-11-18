@@ -79,6 +79,22 @@
   },
   {
     "ContainingType": "WebAPIServer.Modules.Booking.Api.Controllers.OrdersController",
+    "Method": "CheckStatusSeat",
+    "RelativePath": "booking-module/Orders/CheckStatusSeat",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "WebAPIServer.Modules.Booking.Businesses.HandleOrder.Models.CheckStatusSeatDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebAPIServer.Modules.Booking.Api.Controllers.OrdersController",
     "Method": "GetOrderByUser",
     "RelativePath": "booking-module/Orders/GetOrderByUser",
     "HttpMethod": "GET",
@@ -1141,12 +1157,44 @@
   },
   {
     "ContainingType": "WebAPIServer.Modules.Payment.Api.Controllers.PaymentController",
+    "Method": "CreatePayment",
+    "RelativePath": "payment-module/Payment",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "WebAPIServer.Modules.Payment.Businesses.HandlePayment.Dtos.PaymentRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebAPIServer.Modules.Payment.Api.Controllers.PaymentController",
     "Method": "CashPayment",
     "RelativePath": "payment-module/Payment/cash",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebAPIServer.Modules.Payment.Api.Controllers.PaymentController",
+    "Method": "ConfirmPayment",
+    "RelativePath": "payment-module/Payment/confirm-payment",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "paymentIntentId",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
     "ReturnTypes": []
   },
   {

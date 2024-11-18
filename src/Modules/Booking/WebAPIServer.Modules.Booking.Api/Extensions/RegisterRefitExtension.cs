@@ -14,7 +14,10 @@ namespace WebAPIServer.Modules.Booking.Api.Extensions
 				.ConfigureHttpClient(c => c.BaseAddress = new Uri("https://localhost:7022/catalog-module"));
 			services.AddRefitClient<IMovieManagementModuleApi>()
 				.ConfigureHttpClient(c => c.BaseAddress = new Uri("https://localhost:7022/movie-management-module"));
-			return services;
+            services.AddRefitClient<IVoucherModuleApi>()
+                .ConfigureHttpClient(c => c.BaseAddress = new Uri("https://localhost:7022/voucher-module"));
+
+            return services;
 		}
 	}
 }
