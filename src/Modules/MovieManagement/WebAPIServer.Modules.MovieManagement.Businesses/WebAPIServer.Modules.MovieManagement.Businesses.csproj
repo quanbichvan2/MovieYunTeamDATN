@@ -7,10 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="HandleSeatType\Commands\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\WebAPIServer.Modules.MovieManagement.Domain\WebAPIServer.Modules.MovieManagement.Domain.csproj" />
   </ItemGroup>
 

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WebAPIServer.Shared.Abstractions")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6c6a4f801c47a59f40c15be8493d705e38eef75a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c386dd7e4b79262d0a66643360a1183b34c239b4")]
 [assembly: System.Reflection.AssemblyProductAttribute("WebAPIServer.Shared.Abstractions")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WebAPIServer.Shared.Abstractions")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

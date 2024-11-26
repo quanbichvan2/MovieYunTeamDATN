@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using FluentValidation;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 using WebAPIServer.Modules.MovieManagement.Businesses;
@@ -20,6 +21,8 @@ using WebAPIServer.Modules.MovieManagement.Businesses.HandleMovie;
 using WebAPIServer.Modules.MovieManagement.Businesses.HandleMovie.Models;
 using WebAPIServer.Modules.MovieManagement.Businesses.HandleMovie.Validations;
 using WebAPIServer.Modules.MovieManagement.Businesses.HandleSeatType;
+using WebAPIServer.Modules.MovieManagement.Businesses.HandleSeatType.Commands;
+using WebAPIServer.Modules.MovieManagement.Businesses.HandleSeatType.Validations;
 using WebAPIServer.Modules.MovieManagement.Businesses.HandleShow;
 using WebAPIServer.Modules.MovieManagement.Businesses.HandleShow.Models;
 using WebAPIServer.Modules.MovieManagement.Businesses.HandleShow.Validations;
@@ -54,6 +57,8 @@ namespace WebAPIServer.Modules.MovieManagement.Api.Extensions
             services.AddScoped<IValidator<ShowForUpdateDto>, ShowForUpdateDtoValidation>();
             services.AddScoped<IValidator<CastMemberForCreateDto>, CastMemberForCreateDtoValidation>();
             services.AddScoped<IValidator<CastMemberForUpdateDto>, CastMemberForUpdateDtoValidation>();
+            services.AddScoped<IValidator<CreateSeatTypeDto>, CreateSeatTypeDtoValidation>();
+            services.AddScoped<IValidator<UpdateSeatTypeDto>, UpdateSeatTypeDtoValidation>();
 
             return services;
         }

@@ -1042,12 +1042,49 @@
   },
   {
     "ContainingType": "WebAPIServer.Modules.MovieManagement.Api.Controllers.SeatTypesController",
+    "Method": "Create",
+    "RelativePath": "movie-management-module/SeatTypes",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "WebAPIServer.Modules.MovieManagement.Businesses.HandleSeatType.Commands.CreateSeatTypeDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebAPIServer.Modules.MovieManagement.Api.Controllers.SeatTypesController",
     "Method": "GetSeatTypes",
     "RelativePath": "movie-management-module/SeatTypes",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebAPIServer.Modules.MovieManagement.Api.Controllers.SeatTypesController",
+    "Method": "Update",
+    "RelativePath": "movie-management-module/SeatTypes/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "model",
+        "Type": "WebAPIServer.Modules.MovieManagement.Businesses.HandleSeatType.Commands.UpdateSeatTypeDto",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   },
   {
